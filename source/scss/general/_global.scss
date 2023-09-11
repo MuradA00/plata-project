@@ -21,6 +21,7 @@ body {
 
   -webkit-text-size-adjust: 100%;
   // for text resize
+  overflow-x: hidden;
 
   &.fixed-body {
     position: fixed;
@@ -30,8 +31,8 @@ body {
     overflow: hidden;
     // disable scroll
   }
-  @include tablet {
-    overflow-x: hidden;
+  @include desktop {
+
   }
 }
 
@@ -325,6 +326,8 @@ fieldset {
   --center-content-ratio: clamp(1600px, 150vw, 2400px);
   position: relative;
 
+  padding: clamp(50px, 5vw, 80px) 0 0 0;
+
   &::before {
     @include pseudo;
 
@@ -332,7 +335,7 @@ fieldset {
     height: var(--center-content-ratio);
     background-color: rgba(var(--cl-d-1), 1);
     border: 1px solid rgba(var(--cl-y), .75);
-    box-shadow: 0 0 3rem 4px rgba(var(--cl-y), 0.35);
+    box-shadow: 0 0 5rem 3px rgba(var(--cl-y), 0.3);
     border-radius: 50%;
 
     pointer-events: none;
@@ -340,5 +343,107 @@ fieldset {
 
     left: 50%;
     transform: translateX(-50%);
+  }
+}
+.center {
+  --image-w: 200px;
+
+  &-image {
+    max-width: var(--image-w);
+    width: 100%;
+    position: absolute;
+    pointer-events: none;
+    img {
+      display: block;
+    }
+    &--left-1 {
+      --image-w: 220px;
+      left: -30px;
+      top: -84px;
+      height: 146px;
+
+      animation: bounce 1.5s;
+      animation-direction: alternate;
+      animation-timing-function: cubic-bezier(0.5, 0.05, 1, 0.5);
+      animation-iteration-count: infinite;
+      will-change: transform;
+      img {
+        height: inherit;
+      }
+    }
+    &--left-2 {
+      --image-w: calc(176px * 1.25);
+      top: -40px;
+      left: 140px;
+      z-index: 1;
+
+      animation: orb 5s infinite linear;
+      will-change: transform;
+    }
+    &--right-1 {
+      --image-w: 200px;
+
+      right: clamp(60px, 12.5vw, 200px);
+      top: -40px;
+      z-index: 1;
+      animation: orb 4.5s infinite linear;
+      will-change: transform;
+    }
+    &--right-2 {
+      --image-w: 170px;
+      right: -60px;
+      top: -180px;
+
+      animation: bounce 1.5s;
+      animation-direction: alternate;
+      animation-timing-function: cubic-bezier(0.5, 0.05, 1, 0.5);
+      animation-iteration-count: infinite;
+
+      will-change: transform;
+      img {
+        height: 264px;
+      }
+    }
+  }
+}
+@include tablet {
+  .center {
+    &-image {
+      --image-w: 160px;
+      &--left-1 {
+        --image-w: 120px;
+        height: fit-content;
+        img {
+          height: fit-content;
+        }
+      }
+      &--left-2 {
+        --image-w: 160px;
+
+        top: -80px;
+      }
+      &--right-1 {
+        top: -40px;
+        --image-w: 130px;
+      }
+      &--right-2 {
+        --image-w: 176px;
+
+        height: 160px;
+        top: -140px;
+        img {
+          height: inherit;
+        }
+      }
+    }
+  }
+}
+@include mobile {
+  .center {
+    &-image {
+      &--left-2 {
+        left: 40px;
+      }
+    }
   }
 }

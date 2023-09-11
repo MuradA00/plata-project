@@ -1,0 +1,5 @@
+.video {
+  &-heading {
+    @include gradient(180deg);
+  }
+}

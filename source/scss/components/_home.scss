@@ -2,7 +2,13 @@
   position: relative;
 
   padding-top: 170px;
+  &-divider {
+    display: none;
 
+    @include small-tablet {
+      display: block;
+    }
+  }
   &-image {
     position: absolute;
 

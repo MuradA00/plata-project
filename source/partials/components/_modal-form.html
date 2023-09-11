@@ -1,0 +1,135 @@
+<div class="overlay overlay-currency">
+  <div class="modal-form modal-form-currency cform" data-transaction-type="usdtToUsd">
+    <div class="modal-form-title cform">
+      Оставьте заявку и мы свяжемся с вами
+    </div>
+    <div class="modal-form-currencies-labels-box cform">
+      <div class="modal-form-currencies-label cform">ОТПРАВИТЬ</div>
+      <div class="modal-form-currencies-label cform">ПОЛУЧИТЬ</div>
+    </div>
+    <div class="modal-form-currencies-box cform">
+      <div class="select cform">
+        <div class="selectBtn cform" data-type="firstOption" id="default_first_course_opt">
+          <div class="currency-option-icon cform">
+            <img src="./assets/images/usdt_vector.png" alt="rub">
+          </div>USDT</div>
+        <div class="selectDropdown cform" style="z-index: 2;">
+          <div class="option cform hidden" data-type="firstOption" data-option-type="1 rub">
+            <div class="currency-option-icon cform">
+              <img src="./assets/images/rub_vector.png" class="cform" alt="rub">
+            </div>
+            RUB
+          </div>
+          <div class="option cform" data-type="secondOption" data-option-type="1 usd">
+            <div class="currency-option-icon cform">
+              <img src="./assets/images/usd_vector.png" class="cform" alt="usd">
+            </div>
+            USD
+          </div>
+          <div class="option cform" data-type="thirdOption" data-option-type="1 usdt">
+            <div class="currency-option-icon cform">
+              <img src="./assets/images/usdt_vector.png" class="cform" alt="usdt">
+            </div>
+            USDT
+          </div>
+        </div>
+      </div>
+      <div class="select cform">
+        <div class="selectBtn cform" data-type="firstOption" id="default_second_course_opt">
+          <div class="currency-option-icon cform">
+            <img src="./assets/images/usd_vector.png" class="cform" alt="usd">
+          </div>USD</div>
+        <div class="selectDropdown cform">
+          <div class="option cform hidden" data-type="firstOption" data-option-type="2 Rub">
+            <div class="currency-option-icon cform">
+              <img src="./assets/images/rub_vector.png" class="cform" alt="rub">
+            </div>
+            RUB
+          </div>
+          <div class="option cform" data-type="secondOption" data-option-type="2 Usd">
+            <div class="currency-option-icon cform">
+              <img src="./assets/images/usd_vector.png" class="cform" alt="usd">
+            </div>
+            USD
+          </div>
+          <div class="option cform" data-type="thirdOption" data-option-type="2 Usdt">
+            <div class="currency-option-icon cform">
+              <img src="./assets/images/usdt_vector.png" class="cform" alt="usdt">
+            </div>
+            USDT
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal-form-inputs cform">
+      <div class="modal-form-input-label-box cform">
+        <label class="modal-form-input-label cform">ВЫ ОТПРАВЛЯЕТЕ</label>
+        <input type="number" class="currency_form__input-field cform" id="modal-form-first-input" value="1000">
+      </div>
+      <div class="modal-form-input-label-box cform">
+        <label class="modal-form-input-label cform">ВЫ ПОЛУЧАЕТЕ</label>
+        <input type="number" class="currency_form__input-field cform" id="modal-form-second-input" value="13.7">
+      </div>
+    </div>
+    <div class="modal-form-selects-overflow-box cform">
+      <div class="modal-form-name-input-box cform">
+        <input type="text" class="modal-form-name-input modal-form-name-input-currency name-input cform" placeholder="Как к вам обращаться?">
+      </div>
+      <div class="modal-form-contacts-input-box cform" id="modal-city-select-box">
+        <div class="select modal-form-city-input cform">
+          <div class="selectBtn placeholder-text cform theCityCurrenyInputForm1" data-type="questionOption" id="modal-city-input">
+            В каком городе вы находитесь?
+          </div>
+          <div class="selectDropdown cform">
+            <div class="option contacts-input cform skip" data-type="LAOption">
+              Лос-Анджелес
+            </div>
+            <div class="option contacts-input cform skip" data-type="MiamiOption">
+              Майами
+            </div>
+            <div class="option contacts-input cform skip" id="modalOtherOption" data-type="otherOption">
+              Другой
+            </div>
+          </div>
+        </div>
+        <input type="text" class="modal-form-name-input modal-form-hidden-city-input cform hidden" placeholder="Введите город">
+      </div>
+      <div class="modal-form-contacts-input-box xx cform" id="modal-way-select-box">
+        <div class="select modal-form-contact-input modal-form-contact-input-currency cform">
+          <div class="selectBtn placeholder-text cform theContactCurrenyInputForm1" data-type="firstOption" id="modal-contact-input">
+            Как с вами связаться?
+          </div>
+          <div class="selectDropdown cform">
+            <div class="option contacts-input cform contact-option contact-option-currency modal-tg-option" data-type="firstOption">
+              <img src="./assets/images/telegram_icon.png " class="option-img cform" alt="">
+              Telegram
+            </div>
+            <div class="option contacts-input cform contact-option contact-option-currency numberOnly" data-type="secondOption">
+              <img src="./assets/images/whatsapp_icon.png" class="option-img cform" alt="">WhatsUp
+            </div>
+            <div class="option contacts-input cform contact-option contact-option-currency numberOnly" data-type="thirdOption">
+              <img src="./assets/images/sms_icon.png" class="option-img cform" alt="">IMessage
+            </div>
+            <div class="option contacts-input cform contact-option contact-option-currency numberOnly" data-type="fourOption">
+              <img src="./assets/images/phone_icon.png" class="option-img cform" alt="">Звонок по телефону
+            </div>
+            <div class="option contacts-input cform contact-option contact-option-currency numberOnly" data-type="fiveOption">
+              <img src="./assets/images/mail_icon.png" class="option-img cform" alt="">SMS
+            </div>
+          </div>
+        </div>
+        <input type="text" class="modal-form-name-input modal-form-hidden-сontact-input modal-form-hidden-сontact-input-currency cform hidden phone-mask" placeholder="Введите телефон">
+      </div>
+      <div class="modal-form-textarea-box cform">
+        <textarea class="modal-form-textarea cform" placeholder="Комментарий"></textarea>
+      </div>
+      <div class="modal-form-btn-box cform">
+        <button class="modal-form-btn modal-form-btn-currency cform pulse-animation">
+          Отправить заявку
+        </button>
+      </div>
+    </div>
+    <button class="close-modal">×</button>
+  </div>
+  <div class="activator-ov"></div>
+</div>

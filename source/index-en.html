@@ -3,22 +3,73 @@
 @include('partials/head.html')
 
 <body>
-  @include('partials/header.html')
+  <header class="header">
+    <div class="header__container container">
+      <div class="header__body">
+        <div class="header-flex">
+          <a href="/" class="header-logo">
+            <img src="../img/logos/gold-logo.svg" alt="logo">
+          </a>
+          <button class="header-button button button--flex">
+            <svg class="button-icon">
+              <use href='img/sprite/sprite.svg#tg-icon'></use>
+            </svg>
+            <span class="button-text">Contact on Telegram</span>
+          </button>
+          <div class="header-burger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
 
   <main>
     <div class="main-content">
-      @include('partials/components/_home.html')
+      <section class="home">
+        <div class="home-image home-image--left">
+          <img src="../../img/home/home-image-right.webp" alt="home-image">
+        </div>
+        <div class="home-image home-image--right">
+          <img src="../../img/home/home-image-left.webp" alt="home-image">
+        </div>
+        <div class="home__container container">
+          <div class="home-body">
+            <div class="home-content">
+              <div class="home-content__image">
+                <img src="../../img/home/home-general-image.webp" alt="home-general-image">
+              </div>
+              <h1 class="home-heading global-heading">
+                <span class="home-heading__hl global-heading--gradient">Why do you need money?</span>
+                So you can spend it!
+              </h1>
+              <p class="home-descr">
+                Exchange pesos to dollars and buy/sell USDT safe and easy with us in Los Angeles and Miami!
+              </p>
+              <a href="#" target="_blank" class="home-button button button--dark">
+                <svg class="button-icon">
+                  <use href='img/sprite/sprite.svg#tg-icon'></use>
+                </svg>
+                <span class="button-text">Connect us on Telegram</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <div class="exchanger exchanger-main">
         <div class="exchanger__container container">
           <div class="exchanger-body">
             <div class="exchanger-header">
-              <span class="exchanger-header__hl">Compra y venta de Pesos</span>
+              <span class="exchanger-header__hl">Buy and Sell Peso</span>
             </div>
             <div class="exchanger-inner">
               <div class="exchanger-cols exchanger-inner__item">
                 <div class="exchanger-cols__box">
                   <div class="exchanger-cols__box-header">
-                    Envíe
+                    You send
                   </div>
                   <div class="exchanger-cols__field">
                     <input type="number" class="exchanger-cols__input" value="7900">
@@ -35,7 +86,7 @@
                 </button>
                 <div class="exchanger-cols__box">
                   <div class="exchanger-cols__box-header">
-                    Reciba
+                    You receive
                   </div>
                   <div class="exchanger-cols__field">
                     <input type="number" class="exchanger-cols__input" value="7750.50">
@@ -50,12 +101,12 @@
               </div>
               <div class="exchanger-flex exchanger-inner__item">
                 <div class="exchanger-flex__header exchanger-header">
-                  Tipo de cambio <span class="exchanger-flex__header--hl">USD/MXN:</span>
+                  Exchange rate USD/MXN:<span class="exchanger-flex__header--hl">USD/MXN:</span>
                 </div>
                 <div class="exchanger-flex__block">
                   <div class="exchanger-flex__col">
                     <div class="exchanger-flex__box">
-                      Compra
+                      Buying
                       <div class="exchanger-flex__hl">
                         76.54
                       </div>
@@ -63,7 +114,7 @@
                   </div>
                   <div class="exchanger-flex__col">
                     <div class="exchanger-flex__box">
-                      Venta
+                      Selling
                       <div class="exchanger-flex__hl">
                         77.24
                       </div>
@@ -73,7 +124,7 @@
               </div>
               <button class="exchanger-button button">
                 <span class="button-text">
-                  Dejar una solicitud
+                  Leave an application
                 </span>
               </button>
             </div>
@@ -302,14 +353,148 @@
       <div class="center-image center-image--right-2">
         <img src="img/eth-image.webp" alt="coin-image">
       </div>
-      @include('partials/components/_exchanger.html')
-    </div>
-    @include('partials/components/_video.html')
-    @include('partials/components/_license.html')
-    @include('partials/contact.html')
-  </main>
+      <section class="exchanger">
+        <div class="exchanger__container container">
+          <div class="exchanger-body">
+            <div class="exchanger-header">
+              Buying and selling  <span class="exchanger-header__hl">Cryptocurrencies</span>
+            </div>
+            <div class="exchanger-inner">
+              <div class="exchanger-cols exchanger-inner__item">
+                <div class="exchanger-cols__box">
+                  <div class="exchanger-cols__box-header">
+                    You send
+                  </div>
+                  <div class="exchanger-cols__field">
+                    <input type="number" class="exchanger-cols__input" value="7900">
+                    <div class="exchanger-cols__currency">
+                      <div class="exchanger-cols__currency-value">
+                        <img src="../../img/sprite/usdt-icon.svg" alt="currency-icon">
+                      </div>
+                      <div class="exchanger-cols__currency-name">USDT</div>
+                    </div>
+                  </div>
+                </div>
+                <button class="exchanger-switch cryptocurrency_form__switch_btn rotation0">
+                  <img src="../../img/sprite/switch-icon.svg" alt="switch-icon">
+                </button>
+                <div class="exchanger-cols__box">
+                  <div class="exchanger-cols__box-header">
+                    You receive
+                  </div>
+                  <div class="exchanger-cols__field">
+                    <input type="number" class="exchanger-cols__input" value="7750.50">
+                    <div class="exchanger-cols__currency">
+                      <div class="exchanger-cols__currency-value">
+                        <img src="../../img/sprite/usdt-icon.svg" alt="currency-icon">
+                      </div>
+                      <div class="exchanger-cols__currency-name">USDT</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="exchanger-flex exchanger-inner__item">
+                <div class="exchanger-flex__header exchanger-header">
+                  Commission:
+                </div>
+                <div class="exchanger-flex__block">
+                  <div class="exchanger-flex__col">
+                    <div class="exchanger-flex__box">
+                      If the amount is <5000$
+                      <div class="exchanger-flex__hl">
+                        5%
+                      </div>
+                    </div>
+                  </div>
+                  <div class="exchanger-flex__col">
+                    <div class="exchanger-flex__box">
+                      If the amount is >5000$
+                      <div class="exchanger-flex__hl">
+                        3%
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <button class="exchanger-button button">
+                <span class="button-text">
+                  Dejar una solicitud
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
 
-  @include('partials/components/_modal-form.html')
+    </div>
+    <section class="license">
+      <div class="license-image license-image--left">
+        <img src="../../img/license/license-image-left.webp" alt="license-image">
+      </div>
+      <div class="license-image license-image--right">
+        <img src="../../img/license/license-image-right.webp" alt="license-image">
+      </div>
+      <div class="license__container container">
+        <div class="license-content">
+          <h5 class="license-heading global-heading global-heading--gradient">
+            Our license for foreign exchange transactions
+          </h5>
+          <button class="license-view button">
+            <span class="button-text">
+              View
+            </span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact">
+      <div class="contact-absolute">
+        <img src="../img/contact/contact-bag-image.webp" alt="contact-image">
+      </div>
+      <div class="contact__container container">
+        <div class="contact-body">
+          <div class="contact-col contact-col--flex">
+            <h6 class="contact-title global-heading global-heading--gradient">
+              Contact us and we'll get back at you
+            </h6>
+            <div class="contact-inner">
+              <a href="#" target="_blank" class="contact-button button button--dark">
+                <svg class="button-icon">
+                  <use href='img/sprite/sprite.svg#tg-icon'></use>
+                </svg>
+                <span class="button-text">Contáctenos en Telegram</span>
+              </a>
+              <span class="contact-divider"></span>
+              <form action="POST" class="form">
+                <div class="form-container">
+                  <ul class="fieldsets">
+                    <li class="fieldsets__item">
+                      <input type="text" class="fieldsets__input" placeholder="¿Cómo podemos contactarle?">
+                    </li>
+                    <li class="fieldsets__item">
+                      <textarea type="text" class="fieldsets__input" placeholder="¿Cómo podemos contactarle?"></textarea>
+                    </li>
+                  </ul>
+                  <button class="form-accept button contacts_container-btn">
+                    <span class="button-text">
+                      Send an application
+                    </span>
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="contact-col">
+            <div class="contact-image">
+              <img src="../img/contact/contact-image.webp" alt="contact-image">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
 
   @include('partials/footer.html')
   @include('partials/modals.html')
