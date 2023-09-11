@@ -1,0 +1,145 @@
+.contact {
+  background: linear-gradient(180deg, #0C0B0A 0%, #1E1915 100%);
+
+  position: relative;
+
+  overflow: hidden;
+
+  margin-bottom: clamp(50px, 5vw, 80px);
+
+  &__container {
+    --container-width: 1280px;
+  }
+  &-absolute {
+    position: absolute;
+
+    max-width: clamp(300px, 21.75vw, 348px);
+
+    right: -18px;
+    top: 0;
+
+    img {
+      display: block;
+    }
+  }
+  &::before {
+    @include pseudo;
+
+    background: linear-gradient(180deg, #0C0B0A 0%, rgba(12, 11, 10, 0.00) 100%);
+
+    top: 0;
+    right: 0;
+
+    height: 110px;
+    width: 100%;
+
+    pointer-events: none;
+
+    z-index: 1;
+  }
+  &::after {
+    @include pseudo;
+
+    width: 100%;
+    height: 110px;
+
+    bottom: 0;
+    left: 0;
+
+    background: linear-gradient(180deg, rgba(12, 11, 10, 0.00) 0%, #0C0B0A 100%);
+
+    pointer-events: none;
+  }
+  &__container {
+    min-height: 1000px;
+    @include dfc;
+  }
+  &-body {
+    display: grid;
+    grid-template-columns: .76fr 1fr;
+    grid-gap: clamp(32px, 4.75vw, 76px);
+  }
+  &-image {
+    align-self: flex-end;
+
+    img {
+      display: block;
+    }
+  }
+  &-inner {
+    max-width: 480px;
+
+    display: flex;
+    flex-direction: column;
+    grid-gap: 20px;
+  }
+  &-button {
+    width: fit-content;
+
+    padding: 14px 24px;
+  }
+  &-title {
+    @include gradient(180deg);
+    text-align: left;
+  }
+  &-col {
+    &--flex {
+      display: flex;
+      flex-direction: column;
+      grid-gap: 40px;
+    }
+    &:nth-child(2) {
+      align-self: flex-end;
+    }
+  }
+  &-button {
+    position: relative;
+  }
+  &-divider {
+    display: block;
+    width: 100%;
+    height: 1px;
+    bottom: -20px;
+    background-color: rgba(var(--cl-y), .1);
+  }
+}
+
+@include tablet {
+  .contact {
+    padding: 110px 0;
+    &-body {
+      grid-template-columns: 100%;
+    }
+    &-inner {
+      max-width: 100%;
+    }
+    &-absolute {
+      max-width: 200px;
+      right: 60px;
+      bottom: 400px;
+      top: initial;
+      z-index: 1;
+    }
+    &-button {
+      align-self: center;
+    }
+    &-image {
+      max-width: 600px;
+      margin: 0 auto;
+      @include dfc;
+    }
+  }
+}
+
+@include mobile {
+  .contact {
+    &__container {
+      min-height: auto;
+    }
+    &-absolute {
+      right: 0;
+      bottom: 200px;
+      max-width: 140px;
+    }
+  }
+}

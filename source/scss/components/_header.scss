@@ -1,0 +1,79 @@
+.header {
+  padding: clamp(24px, 2.25vw, 36px) 0;
+
+  position: absolute;
+
+  z-index: 6;
+
+  width: 100%;
+
+  &-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &-burger {
+    display: none;
+    flex-direction: column;
+    grid-gap: 7px;
+    cursor: pointer;
+    span {
+      @include gradient(180deg);
+
+      width: 1.5rem;
+      height: 1px;
+    }
+  }
+  &-button {
+    position: fixed;
+
+    top: clamp(24px, 2.25vw, 36px);
+    right: 1rem;
+  }
+  &-logo {
+    max-width: 140px;
+    display: block;
+    width: 100%;
+
+    transition: filter 300ms ease;
+
+    img {
+      display: block;
+    }
+    @include hover {
+      filter: drop-shadow(0 0 .5rem rgba(var(--cl-y), .8)) brightness(120%);
+    }
+  }
+}
+
+@include small-tablet {
+  .header {
+    top: 1.625rem;
+    &-burger {
+      display: flex;
+
+      position: absolute;
+
+      right: 1.5rem;
+      top: -30px;
+    }
+    &-logo {
+      max-width: 120px;
+    }
+    &-flex {
+      position: relative;
+      justify-content: center;
+    }
+    &-button {
+      top: initial;
+
+      width: max-content;
+
+      padding: 1rem 2rem;
+
+      bottom: 36px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+}

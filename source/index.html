@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="En-en">
+@include('partials/head.html')
+
+<body>
+  @include('partials/header.html')
+
+  <main>
+    <div class="main-content">
+      @include('partials/components/_home.html')
+      <div class="exchanger exchanger-main">
+        <div class="exchanger__container container">
+          <div class="exchanger-body">
+            <div class="exchanger-header">
+              <span class="exchanger-header__hl">Compra y venta de Pesos</span>
+            </div>
+            <div class="exchanger-inner">
+              <div class="exchanger-cols exchanger-inner__item">
+                <div class="exchanger-cols__box">
+                  <div class="exchanger-cols__box-header">
+                    Envíe
+                  </div>
+                  <div class="exchanger-cols__field">
+                    <input type="number" class="exchanger-cols__input" value="7900">
+                    <div class="exchanger-cols__currency">
+                      <div class="exchanger-cols__currency-value">
+                        <img src="../../img/sprite/ruble-icon.svg" alt="currency-icon">
+                      </div>
+                      <div class="exchanger-cols__currency-name">USDT</div>
+                    </div>
+                  </div>
+                </div>
+                <button class="exchanger-switch cryptocurrency_form__switch_btn rotation0">
+                  <img src="../../img/sprite/switch-icon.svg" alt="switch-icon">
+                </button>
+                <div class="exchanger-cols__box">
+                  <div class="exchanger-cols__box-header">
+                    Reciba
+                  </div>
+                  <div class="exchanger-cols__field">
+                    <input type="number" class="exchanger-cols__input" value="7750.50">
+                    <div class="exchanger-cols__currency">
+                      <div class="exchanger-cols__currency-value">
+                        <img src="../../img/sprite/dollar-icon.svg" alt="currency-icon">
+                      </div>
+                      <div class="exchanger-cols__currency-name">USD</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="exchanger-flex exchanger-inner__item">
+                <div class="exchanger-flex__header exchanger-header">
+                  Tipo de cambio <span class="exchanger-flex__header--hl">USD/MXN:</span>
+                </div>
+                <div class="exchanger-flex__block">
+                  <div class="exchanger-flex__col">
+                    <div class="exchanger-flex__box">
+                      Compra
+                      <div class="exchanger-flex__hl">
+                        76.54
+                      </div>
+                    </div>
+                  </div>
+                  <div class="exchanger-flex__col">
+                    <div class="exchanger-flex__box">
+                      Venta
+                      <div class="exchanger-flex__hl">
+                        77.24
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <button class="exchanger-button button">
+                <span class="button-text">
+                  Dejar una solicitud
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="center-content">
+      @include('partials/components/_exchanger.html')
+    </div>
+    @include('partials/components/_license.html')
+    @include('partials/contact.html')
+  </main>
+
+  @include('partials/footer.html')
+  @include('partials/modals.html')
+</body>
+<script src="js/main.js"></script>
+
+</html>

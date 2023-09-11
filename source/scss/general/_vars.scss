@@ -1,0 +1,116 @@
+// --------------- hex to rgba mixin ---------------
+@function HexToRGB($hex) {
+  @return red($hex), green($hex), blue($hex);
+}
+:root {
+// --------------- default global variable ---------------
+  --body-bg: #12192B;
+  --footer-bg: #0C1323;
+  --body-font-size: 16px;
+  --content-width: 1100px;
+  --content-width-mode: 1280px;
+  --container-offset: 16px;
+  --container-width: 1240px;
+  --root-button-corner: 90px;
+  --root-button-py: 1rem;
+  --root-button-px: 1.5rem;
+  --switch-button: 48px;
+// --------------- default JS variable ---------------
+  --header-height: 62px;
+
+  --size: Min(24vw, 264px);
+// --------------- default JS tablet variable ---------------
+  // @media (max-width: 1024px) {
+  //   --header-height: 65px;
+  // }
+
+// --------------- default JS small-tablet variable ---------------
+  // @media (max-width: 767px) {
+  //   --header-height:82px;
+  // }
+// --------------- default scroll variable ---------------
+  --scrollbar-thumb: #6866F6;
+  --scrollbar-thumb-hover: #f6866F6ff;
+  --scrollbar-track:  #05031d;
+  --scrollbar-track-hover: #05031d;
+  --overlay-bg: rgba(0, 0, 0, 0.5);
+
+// --------------- default slect variable ---------------
+  --select-inner-bg: #404040;
+  --select-inner-border: #FDFDFD;
+  --select-focus-border: #FDFDFD;
+
+// --------------- default font-family variable ---------------
+  --ff: "firs" , sans-serif; // var(--font-family);
+
+// --------------- font sizes ---------------------------------
+--t-xxs: 10px;
+--t-xs: 12px;
+--t-sm: 14px;
+--t-base: 16px;
+--t-md: 18px;
+--t-lg: 20px;
+--t-xl: 24px;
+--t-xxl: 26px;
+--t-xxl-2: 28px;
+--t-xxl-3: 32px;
+--t-xxl-4: 36px;
+// --------------- default text color variable ---------------
+  // --burger-cl: #{HexToRGB(#00d655)};
+
+  --cl-w: #{HexToRGB(#ffffff)}; // rgba(var(--cl-a),1.0);
+  --cl-b: #{HexToRGB(#000000)}; // rgba(var(--cl-b),1.0);
+  --cl-y: #{HexToRGB(#E4BC6D)}; // rgba(var(--cl-c),1.0);
+  --cl-d-1: #{HexToRGB(#0C0B0A)}; // rgba(var(--cl-d),1.0);
+  --cl-d-2: #{HexToRGB(#A49C8C)}; // rgba(var(--cl-e),1.0);
+  --cl-d-3: #{HexToRGB(#191714)}; // rgba(var(--cl-f),1.0);
+  --cl-d-4: #{HexToRGB(#12100E)}; // rgba(var(--cl-g),1.0);
+  --cl-d-5: #{HexToRGB(#6C665B)}; // rgba(var(--cl-k),1.0);
+  --cl-l-1: #{HexToRGB(#FCFCFD)}; // rgba(var(--cl-l),1.0);
+  --cl-l-2: #{HexToRGB(#D9D9D9)}; // rgba(var(--cl-m),1.0);
+  --cl-l-3: #{HexToRGB(#A49C8C)}; // rgba(var(--cl-n),1.0);
+  --cl-l-4: #{HexToRGB(#D9D9D9)}; // rgba(var(--cl-o),1.0);
+  --cl-l-5: #{HexToRGB(#FDFDFD)};
+  --cl-p: #{HexToRGB(#25344A)}; // rgba(var(--cl-p),1.0);
+  --cl-q: #{HexToRGB(#ecbe08)}; // rgba(var(--cl-q),1.0);
+  --cl-r: #{HexToRGB(#0B1122)}; // rgba(var(--cl-r),1.0);
+
+
+// --------------- default background cl variable ---------------
+  --bg-a: #{HexToRGB(#ffffff)}; // rgba(var(--bg-a),1.0);
+  --bg-b: #{HexToRGB(#000000)}; // rgba(var(--bg-b),1.0);
+  --bg-c: #{HexToRGB(#101729)}; // rgba(var(--bg-c),1.0);
+  --bg-d: #{HexToRGB(#94A3B8)}; // rgba(var(--bg-d),1.0);
+  --bg-e: #{HexToRGB(#1E6FF6)}; // rgba(var(--bg-e),1.0);
+  --bg-f: #{HexToRGB(#64748B)}; // rgba(var(--bg-f),1.0);
+  --bg-g: #{HexToRGB(#161F35)}; // rgba(var(--bg-g),1.0);
+  --bg-k: #{HexToRGB(#172746)}; // rgba(var(--bg-k),1.0);
+  --bg-l: #{HexToRGB(#2E5495)}; // rgba(var(--bg-l),1.0);
+  --bg-m: #{HexToRGB(#58BF00)}; // rgba(var(--bg-m),1.0);
+  --bg-n: #{HexToRGB(#0B101E)}; // rgba(var(--bg-n),1.0);
+  --bg-o: #{HexToRGB(#D72F33)}; // rgba(var(--bg-o),1.0);
+  --bg-p: #{HexToRGB(#25344A)}; // rgba(var(--bg-p),1.0);
+  --bg-q: #{HexToRGB(#ecbe08)}; // rgba(var(--bg-q),1.0);
+  --bg-r: #{HexToRGB(#0B1122)}; // rgba(var(--bg-r),1.0);
+
+
+
+// --------------- default border cl variable ---------------
+  --br-a: #3D3E5C; // var(--br-a);
+  --br-b: #262D3D; // var(--br-b);
+  --br-c: #D72F33; // var(--br-c);
+  --br-d: #1E6FF6; // var(--br-d);
+  --br-e: #ECBF08; // var(--br-e);
+
+  --br-f: #546DB3; // var(--br-f);
+  --br-g: #66F6A8; // var(--br-g);
+
+
+// --------------- gradient background cl variable ---------------
+
+// ---------------default background modal variable-----------
+
+--bm-a: #{HexToRGB(#253A75)}; // rgba(var(--bm-a),1.0);
+--bm-b: #{HexToRGB(#6966f600)}; // rgba(var(--bm-b),1.0);
+--bm-c: #{HexToRGB(#08142800)}; // rgba(var(--bm-c),1.0);
+}
