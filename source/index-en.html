@@ -485,7 +485,7 @@
                   </div>
                   <div class="exchanger-flex__col">
                     <div class="exchanger-flex__box">
-                      If the amount is >5000$
+                      If the amount is 5000$
                       <div class="exchanger-flex__hl">
                         3%
                       </div>
@@ -690,7 +690,7 @@
         <div class="contact-body">
           <div class="contact-col contact-col--flex">
             <h6 class="contact-title global-heading global-heading--gradient">
-              Contact us and we'll get back at you
+              Contáctenos y nos pondremos en contacto con usted
             </h6>
             <div class="contact-inner">
               <a href="#" target="_blank" class="contact-button button button--dark">
@@ -700,22 +700,57 @@
                 <span class="button-text">Contáctenos en Telegram</span>
               </a>
               <span class="contact-divider"></span>
-              <form action="POST" class="form">
-                <div class="form-container">
-                  <ul class="fieldsets">
-                    <li class="fieldsets__item">
-                      <input type="text" class="fieldsets__input" placeholder="¿Cómo podemos contactarle?">
-                    </li>
-                    <li class="fieldsets__item">
-                      <textarea type="text" class="fieldsets__input" placeholder="¿Cómo podemos contactarle?"></textarea>
-                    </li>
-                  </ul>
-                  <button class="form-accept button contacts_container-btn">
-                    <span class="button-text">
-                      Send an application
-                    </span>
-                  </button>
+              <form class="contacts_container_form">
+                <input type="text" class="contacts_container_input name-input fieldsets__input" placeholder="How to approach you?">
+                <div class="contacts-input-container" id="contact-city-select-box">
+                  <div class="select modal-form-city-input">
+                    <div class="selectBtn placeholder-text" id="contact-city-default-input" data-type="questionOption">
+                      In which city are you located?
+                    </div>
+                    <div class="selectDropdown">
+                      <div class="option contacts-input skip" data-type="LAOption">
+                        Лос-Анджелес
+                      </div>
+                      <div class="option contacts-input skip" data-type="MiamiOption">
+                        Майами
+                      </div>
+                      <div class="option contacts-input contact-hidden-city-option skip" id="modalOtherOption1" data-type="otherOption">
+                        Другой
+                      </div>
+                    </div>
+                  </div>
                 </div>
+                <input type="text" class="contact-form-hidden-city-input contacts_container_input name-input hidden" placeholder="In which city are you located?">
+                <div class="contacts-input-container" id="contact-way-select-box">
+                  <div style="width: 100% !important ; height: 100% !important" class="select modal-form-contact-input">
+                    <div class="selectBtn placeholder-text" data-type="firstOption" style="width: 100% !important ; height: 100% !important" id="contact-way-default-input">
+                      How to contact you?
+                    </div>
+                    <div class="selectDropdown">
+                      <div class="option contacts-input contact-option-form contact-tg-option optionn" data-type="firstOption">
+                        <img src="../img/telegram_icon.png " class="option-img" alt="">
+                        Telegram
+                      </div>
+                      <div class="option contacts-input contact-option-form xx numberOnly optionn" data-type="secondOption">
+                        <img src="../img/whatsapp_icon.png" class="option-img" alt="">WhatsUp
+                      </div>
+                      <div class="option contacts-input contact-option-form numberOnly optionn" data-type="thirdOption">
+                        <img src="../img/sms_icon.png" class="option-img" alt="">IMessage
+                      </div>
+                      <div class="option contacts-input contact-option-form numberOnly optionn" data-type="fourOption">
+                        <img src="../img/phone_icon.png" class="option-img" alt="">Звонок по телефону
+                      </div>
+                      <div class="option contacts-input contact-option-form numberOnly optionn" data-type="fiveOption">
+                        <img src="../img/mail_icon.png" class="option-img" alt="">SMS
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <input type="text" class="contact-form-hidden-number-input contacts_container_input name-input hidden phone-mask fieldsets__input" id="contact-way-spec-input" placeholder="How to contact you?">
+                <textarea class="contacts_container_input comment-input fieldsets__input" placeholder="Comment"></textarea>
+                <button class="contacts_container-btn pulse-animation button">
+                  <span class="button-text">Send an application</span>
+                </button>
               </form>
             </div>
           </div>
@@ -727,6 +762,7 @@
         </div>
       </div>
     </section>
+
 
   </main>
 

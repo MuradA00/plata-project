@@ -1,5 +1,7 @@
 import './_vendor';
 import './_components';
+// import './components/contact-form-service.js'
+// import './components/currencies-select'
 
 const menu = document.querySelector('.menu');
 const burger = document.querySelector('.header-burger');

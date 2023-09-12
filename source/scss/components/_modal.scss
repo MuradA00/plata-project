@@ -213,6 +213,7 @@
   border: 1px solid #a49c8c;
   border-radius: 20px;
   color: #fcfcfd;
+  transition: 200ms ease;
 }
 
 .select .selectBtn {
@@ -236,9 +237,9 @@
   content: "";
   position: absolute;
   top: 45%;
-  right: 20px;
-  width: 6px;
-  height: 6px;
+  right: 24px;
+  width: 10px;
+  height: 10px;
   -webkit-transform: translateY(-50%) rotate(45deg);
   transform: translateY(-50%) rotate(45deg);
   border-right: 2px solid #a49c8c;

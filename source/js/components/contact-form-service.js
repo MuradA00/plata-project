@@ -1,7 +1,6 @@
 const contactForm = document.querySelector(".contacts_container_form");
 const contactFormSbmtBtn = document.querySelector(".contacts_container-btn");
 const sendFormUrl = "https://whatmoneyapi.azurewebsites.net/contact";
-
 const contactNameField = document.querySelector(
   ".contacts_container_input.name-input"
 );
@@ -16,7 +15,7 @@ const contactCommentField = document.querySelector(
 );
 
 const isCityFieldEmpty = () => {
-  if (contactCityField.textContent.trim() == "В каком городе вы находитесь?") {
+  if (contactCityField.textContent.trim() == "¿En qué ciudad se encuentra?") {
     return true;
   } else if (contactCityField.textContent.trim() !== "Другой") {
     return false;
@@ -26,7 +25,7 @@ const isCityFieldEmpty = () => {
 };
 
 const isContactFieldEmpty = () => {
-  if (contactTypeField.textContent.trim() == "Как с вами связаться?") {
+  if (contactTypeField.textContent.trim() == "¿Cómo podemos contactarnos con usted?") {
     return true;
   } else {
     return document.querySelector("#contact-way-spec-input").value?.length == 0;
