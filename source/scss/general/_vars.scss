@@ -107,7 +107,8 @@
 
 
 // --------------- gradient background cl variable ---------------
-
+--bg-gradient: rgba(0, 0, 0, 0)
+linear-gradient(to right, #f1cb70 0%, #f89482 100%) repeat scroll 0 0;
 // ---------------default background modal variable-----------
 
 --bm-a: #{HexToRGB(#253A75)}; // rgba(var(--bm-a),1.0);

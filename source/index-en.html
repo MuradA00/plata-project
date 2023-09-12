@@ -1,8 +1,51 @@
 <!DOCTYPE html>
-<html lang="Es-es">
+<html lang="En-en">
 @include('partials/head.html')
-
 <body>
+  <div class="menu">
+    <button class="menu-close">
+      <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M28.276 9.67562C28.8151 9.1367 28.8151 8.26293 28.276 7.72401C27.7372 7.18509 26.8634 7.18509 26.3246 7.72401L18.0003 16.0482L9.67613 7.72401C9.13719 7.18509 8.26342 7.18509 7.7245 7.72401C7.18558 8.26293 7.18558 9.1367 7.7245 9.67562L16.0487 17.9998L7.7245 26.324C7.18558 26.8631 7.18558 27.7367 7.7245 28.2757C8.26342 28.8145 9.13719 28.8145 9.67613 28.2757L18.0003 19.9514L26.3246 28.2757C26.8634 28.8145 27.7372 28.8145 28.276 28.2757C28.8151 27.7367 28.8151 26.8631 28.276 26.324L19.9519 17.9998L28.276 9.67562Z" fill="url(#paint0_linear_1573_2577)"/>
+        <defs>
+        <linearGradient id="paint0_linear_1573_2577" x1="18.0003" y1="7.31982" x2="18.0003" y2="60.7197" gradientUnits="userSpaceOnUse">
+        <stop stop-color="#E4BC6D"/>
+        <stop offset="1" stop-color="#E4BC6D" stop-opacity="0.22"/>
+        </linearGradient>
+        </defs>
+        </svg>
+    </button>
+    <div class="menu-container">
+      <ul class="menu-list">
+        <li class="menu-list__item">
+          <a href="#" class="menu-list__link">
+            Peso exchange
+          </a>
+        </li>
+        <li class="menu-list__item">
+          <a href="#" class="menu-list__link">
+            Cryptocurrency exchange
+          </a>
+        </li>
+        <li class="menu-list__item">
+          <a href="#" class="menu-list__link">
+            Reviews
+          </a>
+        </li>
+        <li class="menu-list__item">
+          <a href="#" class="menu-list__link">
+            Contact us
+          </a>
+        </li>
+      </ul>
+      <a href="#" target="_blank" class="menu-button button button--dark">
+        <svg class="button-icon">
+          <use href='img/sprite/sprite.svg#tg-icon'></use>
+        </svg>
+        <span class="button-text">Contact us on Telegram</span>
+      </a>
+    </div>
+  </div>
+
   <header class="header">
     <div class="header__container container">
       <div class="header__body">
@@ -10,12 +53,45 @@
           <a href="/" class="header-logo">
             <img src="../img/logos/gold-logo.svg" alt="logo">
           </a>
-          <button class="header-button button button--flex">
-            <svg class="button-icon">
-              <use href='img/sprite/sprite.svg#tg-icon'></use>
-            </svg>
-            <span class="button-text">Contact on Telegram</span>
-          </button>
+          <div class="header-fixed">
+            <button class="header-button button button--flex">
+              <svg class="button-icon">
+                <use href='img/sprite/sprite.svg#tg-icon'></use>
+              </svg>
+              <span class="button-text">Contact on Telegram</span>
+            </button>
+          <div class="header-lang">
+            <div class="header-lang__selected">
+              <span class="header-lang__selected-text">EN</span>
+              <span class="header-lang__arrow">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <g clip-path="url(#clip0_1646_3760)">
+                  <path d="M12.0007 13.1722L16.9507 8.22217L18.3647 9.63617L12.0007 16.0002L5.63672 9.63617L7.05072 8.22217L12.0007 13.1722Z" fill="#A49C8C"/>
+                  </g>
+                  <defs>
+                  <clipPath id="clip0_1646_3760">
+                  <rect width="24" height="24" fill="white"/>
+                  </clipPath>
+                  </defs>
+                  </svg>
+              </span>
+            </div>
+            <div class="header-lang__hidden">
+              <ul class="header-lang__list">
+                <li class="header-lang__list-item">
+                  <a href="index.html" class="header-lang__list-link">
+                    ES
+                  </a>
+                </li>
+                <li class="header-lang__list-item">
+                  <a href="index-en.html" class="header-lang__list-link header-lang__list-link--active">
+                    EN
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          </div>
           <div class="header-burger">
             <span></span>
             <span></span>
@@ -25,6 +101,7 @@
       </div>
     </div>
   </header>
+
 
   <main>
     <div class="main-content">
@@ -425,7 +502,164 @@
           </div>
         </div>
       </section>
-
+    </div>
+    <section class="preview_container">
+      <div class="preview_container-gradient">
+        <div class="preview_container-top-gradient"></div>
+        <div class="preview_container-title">Video de testimonios</div>
+        <div class="preview_container-carousel-container">
+          <div class="swiper swiper-coverflow swiper-3d swiper-initialized swiper-horizontal swiper-watch-progress">
+            <div class="swiper-wrapper" style="cursor: grab; transition-duration: 0ms; transform: translate3d(-341.333px, 0px, 0px);" id="swiper-wrapper-0b8562a653610da6e" aria-live="polite">
+              <div class="swiper-slide swiper-slide-visible swiper-slide-prev" role="group" aria-label="1 / 6" data-swiper-slide-index="0">
+                <div class="preview_container-video-card">
+                  <div class="preview_container-video swiper-slide--one">
+                    <button class="preview_container-video-btn" data-type="1-video">
+                      <img src="img/play_icon.png" alt="play">
+                    </button>
+                  </div>
+                  <div class="preview_container-video-name">
+                    Vadim Latypov
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide swiper-slide-visible swiper-slide-active" role="group" aria-label="2 / 6" data-swiper-slide-index="1">
+                <div class="preview_container-video-card">
+                  <div class="preview_container-video swiper-slide--two">
+                    <button class="preview_container-video-btn" data-type="2-video">
+                      <img src="img/play_icon.png" alt="play">
+                    </button>
+                  </div>
+                  <div class="preview_container-video-name">Paul Erl</div>
+                </div>
+              </div>
+              <div class="swiper-slide swiper-slide-visible swiper-slide-next" role="group" aria-label="3 / 6" data-swiper-slide-index="2">
+                <div class="preview_container-video-card">
+                  <div class="preview_container-video swiper-slide--three">
+                    <button class="preview_container-video-btn" data-type="3-video">
+                      <img src="img/play_icon.png" alt="play">
+                    </button>
+                  </div>
+                  <div class="preview_container-video-name">
+                    Ruslan Nigmatullin
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide swiper-slide-visible" role="group" aria-label="4 / 6" data-swiper-slide-index="3">
+                <div class="preview_container-video-card">
+                  <div class="preview_container-video swiper-slide--four">
+                    <button class="preview_container-video-btn" data-type="4-video">
+                      <img src="img/play_icon.png" alt="play">
+                    </button>
+                  </div>
+                  <div class="preview_container-video-name">
+                    Viktoriia Hrab
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide swiper-slide-visible" role="group" aria-label="5 / 6" data-swiper-slide-index="4">
+                <div class="preview_container-video-card">
+                  <div class="preview_container-video swiper-slide--five">
+                    <button class="preview_container-video-btn" data-type="5-video">
+                      <img src="img/play_icon.png" alt="play">
+                    </button>
+                  </div>
+                  <div class="preview_container-video-name">Olya</div>
+                </div>
+              </div>
+              <div class="swiper-slide" role="group" aria-label="6 / 6" data-swiper-slide-index="5">
+                <div class="preview_container-video-card">
+                  <div class="preview_container-video swiper-slide--six">
+                    <button class="preview_container-video-btn" data-type="6-video">
+                      <img src="img/play_icon.png" alt="play">
+                    </button>
+                  </div>
+                  <div class="preview_container-video-name">Irina Sivak</div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal"><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 1"></span><span class="swiper-pagination-bullet swiper-pagination-bullet-active" tabindex="0" role="button" aria-label="Go to slide 2" aria-current="true"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 3"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 4"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 5"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 6"></span></div>
+          <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
+          <div class="swiper-button-next" tabindex="0" role="button" aria-label="Next slide" aria-controls="swiper-wrapper-0b8562a653610da6e"></div>
+          <div class="swiper-button-prev" tabindex="0" role="button" aria-label="Previous slide" aria-controls="swiper-wrapper-0b8562a653610da6e"></div>
+        </div>
+        <div class="preview_container-mobile-carousel-container">
+          <div class="swiper-container swiper-coverflow swiper-3d swiper-initialized swiper-horizontal swiper-watch-progress">
+            <div class="swiper-wrapper" id="swiper-wrapper-5d3621e710101276d" aria-live="polite" style="cursor: grab; transition-duration: 0ms;">
+              <div class="swiper-slide swiper-slide-mobile" data-swiper-slide-index="0" role="group" aria-label="1 / 6">
+                <button class="preview_container-video-btn" data-type="1-video">
+                  <img src="img/play_icon.webp" alt="play">
+                </button>
+                <div class="picture">
+                  <img src="img/vadimlatypof_video_poster.webp" alt="">
+                </div>
+              </div>
+              <div class="swiper-slide swiper-slide-mobile" data-swiper-slide-index="1" role="group" aria-label="2 / 6">
+                <button class="preview_container-video-btn" data-type="2-video">
+                  <img src="img/play_icon.webp" alt="play">
+                </button>
+                <div class="picture">
+                  <img src="img/paul3344_video_poster.webp" alt="">
+                </div>
+              </div>
+              <div class="swiper-slide swiper-slide-mobile" data-swiper-slide-index="2" role="group" aria-label="3 / 6">
+                <button class="preview_container-video-btn" data-type="3-video">
+                  <img src="img/play_icon.webp" alt="play">
+                </button>
+                <div class="picture">
+                  <img src="img/ruslan_nigmatullin_video_poster.webp" alt="">
+                </div>
+              </div>
+              <div class="swiper-slide swiper-slide-mobile" data-swiper-slide-index="3" role="group" aria-label="4 / 6">
+                <button class="preview_container-video-btn" data-type="4-video">
+                  <img src="img/play_icon.webp" alt="play">
+                </button>
+                <div class="picture">
+                  <img src="img/cometvic_video_poster.webp" alt="">
+                </div>
+              </div>
+              <div class="swiper-slide swiper-slide-mobile" data-swiper-slide-index="4" role="group" aria-label="5 / 6">
+                <button class="preview_container-video-btn" data-type="5-video">
+                  <img src="img/play_icon.webp" alt="play">
+                </button>
+                <div class="picture">
+                  <img src="img/mixollya28_video_poster.webp" alt="">
+                </div>
+              </div>
+              <div class="swiper-slide swiper-slide-mobile" data-swiper-slide-index="5" role="group" aria-label="6 / 6">
+                <button class="preview_container-video-btn" data-type="6-video">
+                  <img src="img/play_icon.webp" alt="play">
+                </button>
+                <div class="picture">
+                  <img src="img/wall_str_cat_video_poster.webp" alt="">
+                </div>
+              </div>
+            </div>
+            <div class="swiper-pagination mobile-pagination swiper-pagination-bullets swiper-pagination-horizontal"><span class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet swiper-pagination-bullet-active" aria-current="true"></span><span class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet"></span></div>
+          <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
+        </div>
+        <div class="preview_container__outer_circle">
+          <div class="preview_container__inner_circle"></div>
+        </div>
+        <div class="preview_container-bottom-gradient"></div>
+      </div>
+    </section>
+    <div class="video-overlay hidden">
+      <div class="modal-video-box hidden mvideo">
+        <div class="modal-video mvideo">
+          <video autoplay="" loop="" class="modal-video-play mvideo" playsinline="">
+            <source type="video/mp4">
+          </video>
+        </div>
+        <div class="modal-video-footer mvideo">
+          <div class="modal-video-name mvideo">Sam Smith</div>
+          <div class="modal-video-inst mvideo">
+            <img class="modal-video-img mvideo" src="img/instagram_icon.png" alt="">
+            <img class="modal-video-mobile-img mvideo" src="img/mobile_instagram_icon.png" alt="">
+            <a href="" target="_blank">sam.smith</a>
+          </div>
+        </div>
+      </div>
+      <button class="close-video-modal">×</button>
     </div>
     <section class="license">
       <div class="license-image license-image--left">
@@ -499,6 +733,7 @@
   @include('partials/footer.html')
   @include('partials/modals.html')
 </body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/10.0.0/swiper-bundle.min.js" integrity="sha512-YmW5V9HDaGHx0Aao1SNObo0PHtU64Au8L59yLQlYo+6R8wOqVyo0AO5vm93A/vgOeHBWEsNbsyoXiBy3wz3z2Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="js/main.js"></script>
 
 </html>

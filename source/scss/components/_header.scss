@@ -12,6 +12,85 @@
     align-items: center;
     justify-content: space-between;
   }
+  &-lang {
+    position: relative;
+    &__selected {
+      padding: 1rem 14px 1rem 22px;
+      border: 1px solid rgba(var(--cl-y), 1);
+      background-color: rgba(var(--cl-d-1), 1);
+      border-radius: 60px;
+      display: flex;
+      align-items: center;
+      grid-gap: 6px;
+      cursor: pointer;
+
+      &-text {
+        font-size: var(--t-base);
+        font-weight: 600;
+        color: rgba(var(--cl-w), 1);
+      }
+    }
+    &__arrow {
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+    &__hidden {
+      position: absolute;
+
+      top: 100%;
+      left: 0;
+      width: 100%;
+
+      padding-top: 1rem;
+
+      transition: all 400ms ease;
+      opacity: 0;
+      pointer-events: none;
+      visibility: hidden;
+      transform: scale(.95);
+    }
+    &__list {
+      padding: 12px;
+      border: 1px solid rgba(var(--cl-y), 1);
+      background-color: rgba(var(--cl-d-1), 1);
+      border-radius: 28px;
+      display: flex;
+      flex-direction: column;
+      grid-gap: 8px;
+      &-item {
+        &:not(:last-child) {
+          a {
+            padding-bottom: 8px;
+            border-bottom: 1px solid rgba(var(--cl-y), .1);
+          }
+        }
+      }
+      &-link {
+        justify-content: center;
+        text-align: center;
+        width: 100%;
+        font-size: var(--t-base);
+        font-weight: 600;
+        color: rgba(var(--cl-w), 1);
+
+        @include hover {
+          text-decoration: underline;
+        }
+
+        &--active {
+          color: rgba(var(--cl-y), 1);
+        }
+      }
+    }
+    &:hover {
+      .header-lang__hidden {
+        transform: scale(1);
+        opacity: 1;
+        visibility: visible;
+        pointer-events: all;
+      }
+    }
+  }
   &-burger {
     display: none;
     flex-direction: column;
@@ -24,11 +103,17 @@
       height: 1px;
     }
   }
-  &-button {
+  &-fixed {
     position: fixed;
 
     top: clamp(24px, 2.25vw, 36px);
-    right: 1rem;
+    right: clamp(1.5rem, 2vw, 2rem);
+
+    z-index: 50;
+
+    display: flex;
+    align-items: center;
+    grid-gap: 1rem;
   }
   &-logo {
     max-width: 140px;
@@ -54,8 +139,26 @@
 
       position: absolute;
 
-      right: 1.5rem;
+      right: 0;
       top: -30px;
+    }
+    &-fixed {
+      grid-gap: .5rem;
+    }
+    &-lang {
+      &__hidden {
+        top: initial;
+        bottom: 100%;
+        padding-top: 0;
+        padding-bottom: 1rem;
+      }
+    }
+    &-button {
+      padding: 1rem;
+      grid-gap: 8px;
+      span {
+        font-size: 15px;
+      }
     }
     &-logo {
       max-width: 120px;
@@ -64,7 +167,7 @@
       position: relative;
       justify-content: center;
     }
-    &-button {
+    &-fixed {
       top: initial;
 
       width: max-content;

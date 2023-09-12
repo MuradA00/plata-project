@@ -1,6 +1,8 @@
 .license {
   --content-ratio: 700px;
   position: relative;
+  z-index: 2;
+  background-color: rgba(var(--cl-d-1), 1);
 
   padding: clamp(70px, 6.875vw, 110px) 0;
 
@@ -11,7 +13,7 @@
 
     border-radius: 50%;
 
-    border: 1px solid rgba(var(--cl-y), .5);
+    border: 1px solid rgba(var(--cl-y), .6);
     background-color: rgba(var(--cl-d-1), 1);
 
     aspect-ratio: 1 / 1;
@@ -79,25 +81,29 @@
   .license {
     &-content {
       overflow: hidden;
-
-      padding: 2rem;
+      max-width: none;
+      width: 570px;
       grid-gap: 1rem;
-
+      justify-content: flex-start;
+      padding: 90px 0 0 0;
+      position: relative;
+      margin: 0 auto;
+      aspect-ratio: 1 / 1;
       &::after {
         @include pseudo;
 
-        width: 100%;
-        height: 100%;
+        width: 70%;
+        height: 340px;
 
-        background-image: url('../../img/license/license-image-left.webp');
-        background-size: cover;
+        background-image: url('../../img/license/mob-image.png');
+        background-size: 100% 100%;
         background-position: center;
         background-repeat: no-repeat;
 
-        left: 0;
-        top: 50%;
-        transform: translateY(-50%);
-        opacity: .35;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 0;
+        opacity: 1;
 
         pointer-events: none;
       }
@@ -107,7 +113,7 @@
     }
     &-heading {
       font-size: var(--t-xxl-2);
-      max-width: 400px;
+      max-width: 340px;
     }
     &-image {
       display: none;
@@ -115,3 +121,11 @@
   }
 }
 
+@media only screen and (max-width: 580px) {
+  .license {
+    &-content {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+}

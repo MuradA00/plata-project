@@ -142,8 +142,8 @@
     }
   }
   &-header {
-    font-size: clamp(var(--t-xxl), 1.9375vw, 31px);
-    font-weight: 500;
+    font-size: clamp(var(--t-xl), 1.9375vw, 31px);
+    font-weight: 400;
     text-align: center;
     margin-bottom: 40px;
     &__hl {
