@@ -10,6 +10,20 @@ const contactContentBox = document.querySelector(
   ".contacts_container_content-box"
 );
 
+document.querySelectorAll('.contacts-input-container').forEach(item => {
+  const itemDropdownHeight = item.querySelector('.selectDropdown').scrollHeight;
+  item.addEventListener('click', () => {
+    item.classList.toggle('show-dropdown');
+
+    if (item.classList.contains('show-dropdown')) {
+      item.style.marginBottom = itemDropdownHeight + 'px';
+    }
+    else {
+      item.style.marginBottom = 0;
+    }
+  })
+})
+
 const modalFormContainer = document.querySelector(
   ".modal-form.modal-form-currency.hidden.cform"
 );
@@ -420,6 +434,7 @@ on("click", ".selectBtn", (item) => {
     selectOverlay.classList.toggle("hidden");
     this.removeEventListener("click", arguments.callee, false);
   });
+
   // setTimeout(() => {
   //   if (
   //     !modal.classList.contains("hidden") &&
@@ -538,9 +553,9 @@ on("click", ".option", (item) => {
       usMapImg.classList.remove("mi-scale");
       usMapImg.classList.add("la-scale");
     } else {
-      usMapMobileBox.classList.add("mobile-map-box-scale");
-      usMapMobileImg.classList.remove("mi-scale-mobile");
-      usMapMobileImg.classList.add("la-scale-mobile");
+      // usMapMobileBox.classList.add("mobile-map-box-scale");
+      // usMapMobileImg.classList.remove("mi-scale-mobile");
+      // usMapMobileImg.classList.add("la-scale-mobile");
     }
   }
   if (
@@ -552,9 +567,9 @@ on("click", ".option", (item) => {
       usMapImg.classList.remove("la-scale");
       usMapImg.classList.add("mi-scale");
     } else {
-      usMapMobileBox.classList.add("mobile-map-box-scale");
-      usMapMobileImg.classList.remove("la-scale-mobile");
-      usMapMobileImg.classList.add("mi-scale-mobile");
+      // usMapMobileBox.classList.add("mobile-map-box-scale");
+      // usMapMobileImg.classList.remove("la-scale-mobile");
+      // usMapMobileImg.classList.add("mi-scale-mobile");
     }
   }
   if (
