@@ -14,6 +14,30 @@
         </defs>
         </svg>
     </button>
+    <div class="menu-lang header-lang">
+      <div class="header-lang__selected">
+        <span class="header-lang__selected-text">ES</span>
+        <span class="header-lang__arrow">
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="8" viewBox="0 0 14 8" fill="none">
+            <path d="M7.00072 5.17192L11.9507 0.221924L13.3647 1.63592L7.00072 7.99992L0.636719 1.63592L2.05072 0.221924L7.00072 5.17192Z" fill="#A49C8C"/>
+          </svg>
+        </span>
+      </div>
+      <div class="header-lang__hidden">
+        <ul class="header-lang__list">
+          <li class="header-lang__list-item">
+            <a href="index.html" class="header-lang__list-link header-lang__list-link--active">
+              ES
+            </a>
+          </li>
+          <li class="header-lang__list-item">
+            <a href="index-en.html" class="header-lang__list-link">
+              EN
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
     <div class="menu-container">
       <ul class="menu-list">
         <li class="menu-list__item">
@@ -45,7 +69,209 @@
       </a>
     </div>
   </div>
-
+  <div class="overlay overlay-currency hidden" style="height: 27.5vh;">
+    <div class="modal-form modal-form-currency hidden cform" data-transaction-type="rubToUsd" style="height: 80vh;">
+      <div class="modal-form-title cform">
+        Оставьте заявку и мы свяжемся с вами
+      </div>
+      <div class="modal-form-currencies-labels-box cform">
+        <div class="modal-form-currencies-label cform">ОТПРАВИТЬ</div>
+        <div class="modal-form-currencies-label cform">ПОЛУЧИТЬ</div>
+      </div>
+      <div class="modal-form-currencies-box cform">
+        <div class="select cform">
+          <div class="selectBtn cform" data-type="firstOption" id="default_first_course_opt">
+            <div class="currency-option-icon cform">
+              <img src="./assets/images/rub_vector.png" alt="rub">
+            </div>
+            RUB
+          </div>
+          <div class="selectDropdown cform">
+            <div class="option cform" data-type="firstOption" data-option-type="1 rub">
+              <div class="currency-option-icon cform">
+                <img src="./assets/images/rub_vector.png" class="cform" alt="rub">
+              </div>
+              RUB
+            </div>
+            <div class="option cform" data-type="secondOption" data-option-type="1 usd">
+              <div class="currency-option-icon cform">
+                <img src="./assets/images/usd_vector.png" class="cform" alt="usd">
+              </div>
+              USD
+            </div>
+            <div class="option cform" data-type="thirdOption" data-option-type="1 usdt">
+              <div class="currency-option-icon cform">
+                <img src="./assets/images/usdt_vector.png" class="cform" alt="usdt">
+              </div>
+              USDT
+            </div>
+          </div>
+        </div>
+        <div class="select cform">
+          <div class="selectBtn cform" data-type="firstOption" id="default_second_course_opt">
+            <div class="currency-option-icon cform">
+              <img src="./assets/images/usd_vector.png" class="cform" alt="usd">
+            </div>
+            USD
+          </div>
+          <div class="selectDropdown cform">
+            <div class="option cform" data-type="firstOption" data-option-type="2 Rub">
+              <div class="currency-option-icon cform">
+                <img src="./assets/images/rub_vector.png" class="cform" alt="rub">
+              </div>
+              RUB
+            </div>
+            <div class="option cform" data-type="secondOption" data-option-type="2 Usd">
+              <div class="currency-option-icon cform">
+                <img src="./assets/images/usd_vector.png" class="cform" alt="usd">
+              </div>
+              USD
+            </div>
+            <div class="option cform" data-type="thirdOption" data-option-type="2 Usdt">
+              <div class="currency-option-icon cform">
+                <img src="./assets/images/usdt_vector.png" class="cform" alt="usdt">
+              </div>
+              USDT
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-form-inputs cform">
+        <div class="modal-form-input-label-box cform">
+          <label class="modal-form-input-label cform">ВЫ ОТПРАВЛЯЕТЕ</label>
+          <input type="number" class="currency_form__input-field cform" id="modal-form-first-input" value="1000">
+        </div>
+        <div class="modal-form-input-label-box cform">
+          <label class="modal-form-input-label cform">ВЫ ПОЛУЧАЕТЕ</label>
+          <input type="number" class="currency_form__input-field cform" id="modal-form-second-input" value="13.7">
+        </div>
+      </div>
+      <div class="modal-form-selects-overflow-box cform" style="height: 49.5vh;">
+        <div class="modal-form-name-input-box cform">
+          <input type="text" class="modal-form-name-input modal-form-name-input-currency name-input cform" placeholder="How to approach you?">
+        </div>
+        <div class="modal-form-contacts-input-box cform" id="modal-city-select-box">
+          <div class="select modal-form-city-input cform">
+            <div class="selectBtn placeholder-text cform theCityCurrenyInputForm1" data-type="questionOption" id="modal-city-input">
+              В каком городе вы находитесь?
+            </div>
+            <div class="selectDropdown cform">
+              <div class="option contacts-input cform skip" data-type="LAOption">
+                Лос-Анджелес
+              </div>
+              <div class="option contacts-input cform skip" data-type="MiamiOption">
+                Майами
+              </div>
+              <div class="option contacts-input cform skip" id="modalOtherOption" data-type="otherOption">
+                Другой
+              </div>
+            </div>
+          </div>
+          <input type="text" class="modal-form-name-input modal-form-hidden-city-input cform hidden" placeholder="Введите город">
+        </div>
+        <div class="modal-form-contacts-input-box xx cform" id="modal-way-select-box">
+          <div class="select modal-form-contact-input modal-form-contact-input-currency cform halfWidth">
+            <div class="selectBtn placeholder-text cform theContactCurrenyInputForm1" data-type="firstOption" id="modal-contact-input">
+              Как с вами связаться?
+            </div>
+            <div class="selectDropdown cform">
+              <div class="option contacts-input cform contact-option contact-option-currency modal-tg-option" data-type="firstOption">
+                <img src="./assets/images/telegram_icon.png " class="option-img cform" alt="">
+                Telegram
+              </div>
+              <div class="option contacts-input cform contact-option contact-option-currency numberOnly" data-type="secondOption">
+                <img src="./assets/images/whatsapp_icon.png" class="option-img cform" alt="">WhatsUp
+              </div>
+              <div class="option contacts-input cform contact-option contact-option-currency numberOnly" data-type="thirdOption">
+                <img src="./assets/images/sms_icon.png" class="option-img cform" alt="">IMessage
+              </div>
+              <div class="option contacts-input cform contact-option contact-option-currency numberOnly" data-type="fourOption">
+                <img src="./assets/images/phone_icon.png" class="option-img cform" alt="">Звонок по телефону
+              </div>
+              <div class="option contacts-input cform contact-option contact-option-currency numberOnly" data-type="fiveOption">
+                <img src="./assets/images/mail_icon.png" class="option-img cform" alt="">SMS
+              </div>
+            </div>
+          </div>
+          <input type="text" class="modal-form-name-input modal-form-hidden-сontact-input modal-form-hidden-сontact-input-currency cform phone-mask" placeholder="username/телефон">
+        </div>
+        <div class="modal-form-textarea-box cform">
+          <textarea class="modal-form-textarea cform" placeholder="Комментарий"></textarea>
+        </div>
+        <div class="modal-form-btn-box cform">
+          <button class="modal-form-btn modal-form-btn-currency cform pulse-animation">
+            Отправить заявку
+          </button>
+        </div>
+      </div>
+      <button class="close-modal">×</button>
+    </div>
+    <div class="activator-ov" style="height: 100%;"></div>
+  </div>
+  <div class="overlay overlay-load hidden" id="form1popup">
+    <div class="modal-form modal-form-load cform hidden" id="form1cont">
+      <div class="modal-form-title-image cform">
+        <img src="./assets/images/confirmation-badge2.png" alt="confirmation-badge_load">
+      </div>
+      <div class="modal-form-title modal-form-title-load cform">
+        Скидка 50%
+      </div>
+      <div class="modal-form-subtitle modal-form-subtitle-load cform">
+        На ваш первый обмен
+      </div>
+      <div class="modal-form-selects-overflow-box cform">
+        <div class="modal-form-name-input-box cform">
+          <input type="text" id="modal-contact-name" class="modal-form-name-input name-input cform" placeholder="How to approach you?">
+        </div>
+        <!-- <div
+          class="modal-form-contacts-input-box cform"
+          id="modal-way-select-box"
+        > -->
+        <div class="modal-form-contacts-input-box cform" id="modal-popup">
+          <div class="select modal-form-contact-input cform halfWidth">
+            <div class="selectBtn placeholder-text cform how-contact" data-type="firstOption" id="modal-contact-input">
+                <img src="./assets/images/telegram_icon.png " class="option-img cform" alt="">
+                Telegram
+              </div>
+            <div class="selectDropdown cform" style="z-index: 1;">
+              <div class="option contacts-input cform contact-option modal-tg-option" data-type="firstOption">
+                <img src="./assets/images/telegram_icon.png " class="option-img cform" alt="">
+                Telegram
+              </div>
+              <div class="option contacts-input cform contact-option" data-type="secondOption">
+                <img src="./assets/images/whatsapp_icon.png" class="option-img cform" alt="">WhatsUp
+              </div>
+              <div class="option contacts-input cform contact-option" data-type="thirdOption">
+                <img src="./assets/images/sms_icon.png" class="option-img cform" alt="">IMessage
+              </div>
+              <div class="option contacts-input cform contact-option" data-type="fourOption">
+                <img src="./assets/images/phone_icon.png" class="option-img cform" alt="">Звонок по телефону
+              </div>
+              <div class="option contacts-input cform contact-option" data-type="fiveOption">
+                <img src="./assets/images/mail_icon.png" class="option-img cform" alt="">SMS
+              </div>
+            </div>
+          </div>
+          <input type="text" class="modal-form-name-input modal-form-hidden-сontact-input modal-form-hidden-сontact-input1 how-contact-input cform phone-mask" placeholder="username/телефон">
+        </div>
+        <div class="modal-form-textarea-box cform">
+          <textarea id="comment-modal" class="modal-form-textarea cform" placeholder="Комментарий"></textarea>
+        </div>
+        <div class="modal-form-btn-box1 cform">
+          <a class="modal-form-btn modal-form-btn-load cform pulse-animation">
+            Далее
+          </a>
+        </div>
+      </div>
+      <button class="close-modal-load">
+        <svg width="35" height="35" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M6.2253 4.81108C5.83477 4.42056 5.20161 4.42056 4.81108 4.81108C4.42056 5.20161 4.42056 5.83477 4.81108 6.2253L10.5858 12L4.81114 17.7747C4.42062 18.1652 4.42062 18.7984 4.81114 19.1889C5.20167 19.5794 5.83483 19.5794 6.22535 19.1889L12 13.4142L17.7747 19.1889C18.1652 19.5794 18.7984 19.5794 19.1889 19.1889C19.5794 18.7984 19.5794 18.1652 19.1889 17.7747L13.4142 12L19.189 6.2253C19.5795 5.83477 19.5795 5.20161 19.189 4.81108C18.7985 4.42056 18.1653 4.42056 17.7748 4.81108L12 10.5858L6.2253 4.81108Z" fill="currentColor"></path>
+        </svg>
+      </button>
+    </div>
+    <div class="activator-ov"></div>
+  </div>
+  <div class="select-overlay hidden"></div>
   <header class="header">
     <div class="header__container container">
       <div class="header__body">
@@ -53,14 +279,7 @@
           <a href="/" class="header-logo">
             <img src="../img/logos/gold-logo.svg" alt="logo">
           </a>
-          <div class="header-fixed">
-            <button class="header-button button button--flex">
-              <svg class="button-icon">
-                <use href='img/sprite/sprite.svg#tg-icon'></use>
-              </svg>
-              <span class="button-text">Contact on Telegram</span>
-            </button>
-          <div class="header-lang">
+          <div class="header-lang header-lang--desktop">
             <div class="header-lang__selected">
               <span class="header-lang__selected-text">EN</span>
               <span class="header-lang__arrow">
@@ -91,6 +310,13 @@
               </ul>
             </div>
           </div>
+          <div class="header-fixed">
+            <button class="header-button button button--flex">
+              <svg class="button-icon">
+                <use href='img/sprite/sprite.svg#tg-icon'></use>
+              </svg>
+              <span class="button-text">Contact on Telegram</span>
+            </button>
           </div>
           <div class="header-burger">
             <span></span>
@@ -101,7 +327,6 @@
       </div>
     </div>
   </header>
-
 
   <main>
     <div class="main-content">
@@ -136,7 +361,7 @@
         </div>
       </section>
 
-      <div class="exchanger exchanger-main">
+      <div class="exchanger exchanger-main currency_form" data-currency-type="rubToUsd">
         <div class="exchanger__container container">
           <div class="exchanger-body">
             <div class="exchanger-header">
@@ -149,16 +374,16 @@
                     You send
                   </div>
                   <div class="exchanger-cols__field">
-                    <input type="number" class="exchanger-cols__input" value="7900">
-                    <div class="exchanger-cols__currency">
+                    <input type="number" class="exchanger-cols__input" value="1000" id="currency-form-first-input">
+                    <div class="exchanger-cols__currency currency_form__rub-input-icon-box">
                       <div class="exchanger-cols__currency-value">
                         <img src="../../img/sprite/ruble-icon.svg" alt="currency-icon">
                       </div>
-                      <div class="exchanger-cols__currency-name">USDT</div>
+                      <div class="exchanger-cols__currency-name">RUB</div>
                     </div>
                   </div>
                 </div>
-                <button class="exchanger-switch cryptocurrency_form__switch_btn rotation0">
+                <button class="exchanger-switch currency_form__switch_btn rotation0 currency_form__switch_btn">
                   <img src="../../img/sprite/switch-icon.svg" alt="switch-icon">
                 </button>
                 <div class="exchanger-cols__box">
@@ -166,8 +391,8 @@
                     You receive
                   </div>
                   <div class="exchanger-cols__field">
-                    <input type="number" class="exchanger-cols__input" value="7750.50">
-                    <div class="exchanger-cols__currency">
+                    <input type="number" class="exchanger-cols__input" value="13.07" id="currency-form-second-input">
+                    <div class="exchanger-cols__currency currency_form__usd-input-icon-box">
                       <div class="exchanger-cols__currency-value">
                         <img src="../../img/sprite/dollar-icon.svg" alt="currency-icon">
                       </div>
@@ -178,7 +403,7 @@
               </div>
               <div class="exchanger-flex exchanger-inner__item">
                 <div class="exchanger-flex__header exchanger-header">
-                  Exchange rate USD/MXN:<span class="exchanger-flex__header--hl">USD/MXN:</span>
+                  Exchange rate <span class="exchanger-flex__header--hl">USD/MXN:</span>
                 </div>
                 <div class="exchanger-flex__block">
                   <div class="exchanger-flex__col">
@@ -199,7 +424,7 @@
                   </div>
                 </div>
               </div>
-              <button class="exchanger-button button">
+              <button class="exchanger-button button currency_form__submit_btn show-modal " id="currency-sbmt">
                 <span class="button-text">
                   Leave an application
                 </span>
@@ -430,11 +655,11 @@
       <div class="center-image center-image--right-2">
         <img src="img/eth-image.webp" alt="coin-image">
       </div>
-      <section class="exchanger">
+      <section class="exchanger cryptocurrency_form" data-currency-type="usdtToUsd">
         <div class="exchanger__container container">
           <div class="exchanger-body">
             <div class="exchanger-header">
-              Buying and selling  <span class="exchanger-header__hl">Cryptocurrencies</span>
+              Buying and selling <span class="exchanger-header__hl">Cryptocurrencies</span>
             </div>
             <div class="exchanger-inner">
               <div class="exchanger-cols exchanger-inner__item">
@@ -443,8 +668,8 @@
                     You send
                   </div>
                   <div class="exchanger-cols__field">
-                    <input type="number" class="exchanger-cols__input" value="7900">
-                    <div class="exchanger-cols__currency">
+                    <input type="number" class="exchanger-cols__input" id="cryptocurrency-form-first-input" value="7900">
+                    <div class="exchanger-cols__currency currency_form__usdt-input-icon-box">
                       <div class="exchanger-cols__currency-value">
                         <img src="../../img/sprite/usdt-icon.svg" alt="currency-icon">
                       </div>
@@ -460,12 +685,12 @@
                     You receive
                   </div>
                   <div class="exchanger-cols__field">
-                    <input type="number" class="exchanger-cols__input" value="7750.50">
-                    <div class="exchanger-cols__currency">
+                    <input type="number" class="exchanger-cols__input" value="7750.50" id="cryptocurrency-form-second-input">
+                    <div class="exchanger-cols__currency currency_form__usd-input-icon-box crypto">
                       <div class="exchanger-cols__currency-value">
-                        <img src="../../img/sprite/usdt-icon.svg" alt="currency-icon">
+                        <img src="../../img/sprite/dollar-icon.svg" alt="currency-icon">
                       </div>
-                      <div class="exchanger-cols__currency-name">USDT</div>
+                      <div class="exchanger-cols__currency-name">USD</div>
                     </div>
                   </div>
                 </div>
@@ -477,7 +702,7 @@
                 <div class="exchanger-flex__block">
                   <div class="exchanger-flex__col">
                     <div class="exchanger-flex__box">
-                      If the amount is 5000$
+                      If the amount is < 5000$
                       <div class="exchanger-flex__hl">
                         5%
                       </div>
@@ -485,7 +710,7 @@
                   </div>
                   <div class="exchanger-flex__col">
                     <div class="exchanger-flex__box">
-                      If the amount is 5000$
+                      If the amount is > 5000$
                       <div class="exchanger-flex__hl">
                         3%
                       </div>
@@ -493,173 +718,16 @@
                   </div>
                 </div>
               </div>
-              <button class="exchanger-button button">
+              <button class="exchanger-button button" id="cryptocurrency-sbmt">
                 <span class="button-text">
-                  Dejar una solicitud
+                  Leave an application
                 </span>
               </button>
             </div>
           </div>
         </div>
       </section>
-    </div>
-    <section class="preview_container">
-      <div class="preview_container-gradient">
-        <div class="preview_container-top-gradient"></div>
-        <div class="preview_container-title">Video de testimonios</div>
-        <div class="preview_container-carousel-container">
-          <div class="swiper swiper-coverflow swiper-3d swiper-initialized swiper-horizontal swiper-watch-progress">
-            <div class="swiper-wrapper" style="cursor: grab; transition-duration: 0ms; transform: translate3d(-341.333px, 0px, 0px);" id="swiper-wrapper-0b8562a653610da6e" aria-live="polite">
-              <div class="swiper-slide swiper-slide-visible swiper-slide-prev" role="group" aria-label="1 / 6" data-swiper-slide-index="0">
-                <div class="preview_container-video-card">
-                  <div class="preview_container-video swiper-slide--one">
-                    <button class="preview_container-video-btn" data-type="1-video">
-                      <img src="img/play_icon.png" alt="play">
-                    </button>
-                  </div>
-                  <div class="preview_container-video-name">
-                    Vadim Latypov
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide swiper-slide-visible swiper-slide-active" role="group" aria-label="2 / 6" data-swiper-slide-index="1">
-                <div class="preview_container-video-card">
-                  <div class="preview_container-video swiper-slide--two">
-                    <button class="preview_container-video-btn" data-type="2-video">
-                      <img src="img/play_icon.png" alt="play">
-                    </button>
-                  </div>
-                  <div class="preview_container-video-name">Paul Erl</div>
-                </div>
-              </div>
-              <div class="swiper-slide swiper-slide-visible swiper-slide-next" role="group" aria-label="3 / 6" data-swiper-slide-index="2">
-                <div class="preview_container-video-card">
-                  <div class="preview_container-video swiper-slide--three">
-                    <button class="preview_container-video-btn" data-type="3-video">
-                      <img src="img/play_icon.png" alt="play">
-                    </button>
-                  </div>
-                  <div class="preview_container-video-name">
-                    Ruslan Nigmatullin
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide swiper-slide-visible" role="group" aria-label="4 / 6" data-swiper-slide-index="3">
-                <div class="preview_container-video-card">
-                  <div class="preview_container-video swiper-slide--four">
-                    <button class="preview_container-video-btn" data-type="4-video">
-                      <img src="img/play_icon.png" alt="play">
-                    </button>
-                  </div>
-                  <div class="preview_container-video-name">
-                    Viktoriia Hrab
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide swiper-slide-visible" role="group" aria-label="5 / 6" data-swiper-slide-index="4">
-                <div class="preview_container-video-card">
-                  <div class="preview_container-video swiper-slide--five">
-                    <button class="preview_container-video-btn" data-type="5-video">
-                      <img src="img/play_icon.png" alt="play">
-                    </button>
-                  </div>
-                  <div class="preview_container-video-name">Olya</div>
-                </div>
-              </div>
-              <div class="swiper-slide" role="group" aria-label="6 / 6" data-swiper-slide-index="5">
-                <div class="preview_container-video-card">
-                  <div class="preview_container-video swiper-slide--six">
-                    <button class="preview_container-video-btn" data-type="6-video">
-                      <img src="img/play_icon.png" alt="play">
-                    </button>
-                  </div>
-                  <div class="preview_container-video-name">Irina Sivak</div>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal"><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 1"></span><span class="swiper-pagination-bullet swiper-pagination-bullet-active" tabindex="0" role="button" aria-label="Go to slide 2" aria-current="true"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 3"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 4"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 5"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 6"></span></div>
-          <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
-          <div class="swiper-button-next" tabindex="0" role="button" aria-label="Next slide" aria-controls="swiper-wrapper-0b8562a653610da6e"></div>
-          <div class="swiper-button-prev" tabindex="0" role="button" aria-label="Previous slide" aria-controls="swiper-wrapper-0b8562a653610da6e"></div>
-        </div>
-        <div class="preview_container-mobile-carousel-container">
-          <div class="swiper-container swiper-coverflow swiper-3d swiper-initialized swiper-horizontal swiper-watch-progress">
-            <div class="swiper-wrapper" id="swiper-wrapper-5d3621e710101276d" aria-live="polite" style="cursor: grab; transition-duration: 0ms;">
-              <div class="swiper-slide swiper-slide-mobile" data-swiper-slide-index="0" role="group" aria-label="1 / 6">
-                <button class="preview_container-video-btn" data-type="1-video">
-                  <img src="img/play_icon.webp" alt="play">
-                </button>
-                <div class="picture">
-                  <img src="img/vadimlatypof_video_poster.webp" alt="">
-                </div>
-              </div>
-              <div class="swiper-slide swiper-slide-mobile" data-swiper-slide-index="1" role="group" aria-label="2 / 6">
-                <button class="preview_container-video-btn" data-type="2-video">
-                  <img src="img/play_icon.webp" alt="play">
-                </button>
-                <div class="picture">
-                  <img src="img/paul3344_video_poster.webp" alt="">
-                </div>
-              </div>
-              <div class="swiper-slide swiper-slide-mobile" data-swiper-slide-index="2" role="group" aria-label="3 / 6">
-                <button class="preview_container-video-btn" data-type="3-video">
-                  <img src="img/play_icon.webp" alt="play">
-                </button>
-                <div class="picture">
-                  <img src="img/ruslan_nigmatullin_video_poster.webp" alt="">
-                </div>
-              </div>
-              <div class="swiper-slide swiper-slide-mobile" data-swiper-slide-index="3" role="group" aria-label="4 / 6">
-                <button class="preview_container-video-btn" data-type="4-video">
-                  <img src="img/play_icon.webp" alt="play">
-                </button>
-                <div class="picture">
-                  <img src="img/cometvic_video_poster.webp" alt="">
-                </div>
-              </div>
-              <div class="swiper-slide swiper-slide-mobile" data-swiper-slide-index="4" role="group" aria-label="5 / 6">
-                <button class="preview_container-video-btn" data-type="5-video">
-                  <img src="img/play_icon.webp" alt="play">
-                </button>
-                <div class="picture">
-                  <img src="img/mixollya28_video_poster.webp" alt="">
-                </div>
-              </div>
-              <div class="swiper-slide swiper-slide-mobile" data-swiper-slide-index="5" role="group" aria-label="6 / 6">
-                <button class="preview_container-video-btn" data-type="6-video">
-                  <img src="img/play_icon.webp" alt="play">
-                </button>
-                <div class="picture">
-                  <img src="img/wall_str_cat_video_poster.webp" alt="">
-                </div>
-              </div>
-            </div>
-            <div class="swiper-pagination mobile-pagination swiper-pagination-bullets swiper-pagination-horizontal"><span class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet swiper-pagination-bullet-active" aria-current="true"></span><span class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet"></span></div>
-          <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
-        </div>
-        <div class="preview_container__outer_circle">
-          <div class="preview_container__inner_circle"></div>
-        </div>
-        <div class="preview_container-bottom-gradient"></div>
-      </div>
-    </section>
-    <div class="video-overlay hidden">
-      <div class="modal-video-box hidden mvideo">
-        <div class="modal-video mvideo">
-          <video autoplay="" loop="" class="modal-video-play mvideo" playsinline="">
-            <source type="video/mp4">
-          </video>
-        </div>
-        <div class="modal-video-footer mvideo">
-          <div class="modal-video-name mvideo">Sam Smith</div>
-          <div class="modal-video-inst mvideo">
-            <img class="modal-video-img mvideo" src="img/instagram_icon.png" alt="">
-            <img class="modal-video-mobile-img mvideo" src="img/mobile_instagram_icon.png" alt="">
-            <a href="" target="_blank">sam.smith</a>
-          </div>
-        </div>
-      </div>
-      <button class="close-video-modal">×</button>
+
     </div>
     <section class="license">
       <div class="license-image license-image--left">
@@ -682,12 +750,12 @@
       </div>
     </section>
 
-    <section class="contact">
+    <section class="contact contacts_container">
       <div class="contact-absolute">
         <img src="../img/contact/contact-bag-image.webp" alt="contact-image">
       </div>
       <div class="contact__container container">
-        <div class="contact-body">
+        <div class="contact-body ">
           <div class="contact-col contact-col--flex">
             <h6 class="contact-title global-heading global-heading--gradient">
               Contáctenos y nos pondremos en contacto con usted
@@ -700,33 +768,33 @@
                 <span class="button-text">Contáctenos en Telegram</span>
               </a>
               <span class="contact-divider"></span>
-              <form class="contacts_container_form">
+              <form class="contacts_container_form form">
                 <input type="text" class="contacts_container_input name-input fieldsets__input" placeholder="How to approach you?">
                 <div class="contacts-input-container" id="contact-city-select-box">
                   <div class="select modal-form-city-input">
-                    <div class="selectBtn placeholder-text" id="contact-city-default-input" data-type="questionOption">
-                      In which city are you located?
-                    </div>
-                    <div class="selectDropdown">
+                    <div class="selectBtn placeholder-text" id="contact-city-default-input" data-type="LAOption">
+                        Los - Angeles
+                      </div>
+                    <div class="selectDropdown" style="z-index: 3;">
                       <div class="option contacts-input skip" data-type="LAOption">
-                        Лос-Анджелес
+                        Los - Angeles
                       </div>
                       <div class="option contacts-input skip" data-type="MiamiOption">
-                        Майами
+                        Miami
                       </div>
                       <div class="option contacts-input contact-hidden-city-option skip" id="modalOtherOption1" data-type="otherOption">
-                        Другой
+                        Other
                       </div>
                     </div>
                   </div>
                 </div>
-                <input type="text" class="contact-form-hidden-city-input contacts_container_input name-input hidden" placeholder="In which city are you located?">
+                <input type="text" class="contact-form-hidden-city-input contacts_container_input name-input hidden" placeholder="Введите ваш город">
                 <div class="contacts-input-container" id="contact-way-select-box">
-                  <div style="width: 100% !important ; height: 100% !important" class="select modal-form-contact-input">
-                    <div class="selectBtn placeholder-text" data-type="firstOption" style="width: 100% !important ; height: 100% !important" id="contact-way-default-input">
-                      How to contact you?
-                    </div>
-                    <div class="selectDropdown">
+                  <div style="width: 100% !important ; height: 100% !important" class="select modal-form-contact-input border">
+                    <div class="selectBtn placeholder-text" data-type="secondOption" style="width: 100% !important ; height: 100% !important" id="contact-way-default-input">
+                        <img src="../img/whatsapp_icon.png" class="option-img" alt="">WhatsUp
+                      </div>
+                    <div class="selectDropdown toggle" style="z-index: 5;">
                       <div class="option contacts-input contact-option-form contact-tg-option optionn" data-type="firstOption">
                         <img src="../img/telegram_icon.png " class="option-img" alt="">
                         Telegram
@@ -738,7 +806,7 @@
                         <img src="../img/sms_icon.png" class="option-img" alt="">IMessage
                       </div>
                       <div class="option contacts-input contact-option-form numberOnly optionn" data-type="fourOption">
-                        <img src="../img/phone_icon.png" class="option-img" alt="">Звонок по телефону
+                        <img src="../img/phone_icon.png" class="option-img" alt="">By phone call
                       </div>
                       <div class="option contacts-input contact-option-form numberOnly optionn" data-type="fiveOption">
                         <img src="../img/mail_icon.png" class="option-img" alt="">SMS
@@ -746,9 +814,9 @@
                     </div>
                   </div>
                 </div>
-                <input type="text" class="contact-form-hidden-number-input contacts_container_input name-input hidden phone-mask fieldsets__input" id="contact-way-spec-input" placeholder="How to contact you?">
+                <input type="text" class="contact-form-hidden-number-input contacts_container_input name-input phone-mask fieldsets__input" id="contact-way-spec-input" placeholder="How to contact you?">
                 <textarea class="contacts_container_input comment-input fieldsets__input" placeholder="Comment"></textarea>
-                <button class="contacts_container-btn pulse-animation button">
+                <button class="button contacts_container-btn">
                   <span class="button-text">Send an application</span>
                 </button>
               </form>
@@ -756,20 +824,18 @@
           </div>
           <div class="contact-col">
             <div class="contact-image">
-              <img src="../img/contact/contact-image.webp" alt="contact-image">
+              <img src="../img/contact/contact-image.webp" id="us_map_img" alt="contact-image">
             </div>
           </div>
         </div>
       </div>
     </section>
 
-
   </main>
 
   @include('partials/footer.html')
   @include('partials/modals.html')
 </body>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/10.0.0/swiper-bundle.min.js" integrity="sha512-YmW5V9HDaGHx0Aao1SNObo0PHtU64Au8L59yLQlYo+6R8wOqVyo0AO5vm93A/vgOeHBWEsNbsyoXiBy3wz3z2Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="js/main.js"></script>
 
 </html>

@@ -1,0 +1,221 @@
+.firstPage-section {
+  position: relative;
+
+  z-index: 2;
+
+  padding: 0 1rem;
+}
+.first-body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .header {
+    top: 0;
+    &__inner {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    &__logo {
+      // max-width: clamp(140px, 11.25vw, 180px);
+      height: 50px;
+
+      img {
+        height: inherit;
+      }
+    }
+  }
+}
+.success-main {
+  flex: 1;
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+
+  position: relative;
+
+  &::after {
+    @include pseudo;
+
+    width: 120%;
+    height: 640px;
+
+    background-color: rgba(var(--cl-d-1), 1);
+    border: 1px solid rgba(var(--cl-y), .8);
+    border-radius: 50%;
+
+    bottom: -500px;
+    box-shadow: 0 0 7rem 4px rgba(var(--cl-y), .5);
+
+    @include laptop {
+      width: 1400px;
+      bottom: -560px;
+    }
+  }
+}
+.quotes::before {
+  top: 480px !important;
+}
+
+.firstPage-title {
+  text-align: center;
+  min-height: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: clamp(22px, 1.9375vw, 31px);
+  font-weight: 600;
+  background: linear-gradient(180deg, #E4BC6D 0%, rgba(228, 188, 109, 0.22) 250%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.firstPage-subtitle {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  line-height: 110%;
+  font-size: clamp(22px, 1.9375vw, 31px);
+  color: #fdfdfd;
+}
+
+.firstPage-title-image {
+  text-align: center;
+}
+.firstPage-button {
+  max-width: 490px;
+  width: 100%;
+  margin: 0 auto;
+}
+.firstPage-title-image img {
+  width: 110px;
+  height: 110px;
+
+  @include laptop {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+.firstPage-title-btn {
+  display: flex;
+  justify-content: center;
+  margin-top: 36px;
+}
+
+.firstPage-title-btn button {
+  width: 34vw;
+  height: 6.2vh;
+  background: linear-gradient(
+    180deg,
+    #e4bc6d 0%,
+    rgba(228, 188, 109, 0.22) 250%
+  );
+  border: none;
+  border-radius: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 1.1vw;
+  text-align: center;
+  color: #0c0b0a;
+  cursor: pointer;
+}
+.firstPage-title-box {
+  margin-bottom: 2rem;
+}
+@media only screen and (max-width: 767px) {
+  .firstPage-section {
+    margin-top: 50px;
+
+  }
+
+  .quotes::before {
+    top: 100px !important;
+    width: 35.5rem;
+  }
+
+  .firstPage-title {
+    text-align: center;
+    min-height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    background: linear-gradient(
+      178.58deg,
+      rgba(228, 188, 109, 0) -230.32%,
+      #e4bc6d 98.79%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .firstPage-subtitle {
+    text-align: center;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 400;
+    font-size: clamp(22px, 1.9375vw, 31px);
+    color: #fdfdfd;
+  }
+
+  .firstPage-title-image {
+    text-align: center;
+  }
+
+  .firstPage-title-btn {
+    display: flex;
+    justify-content: center;
+    margin-top: 36px;
+  }
+  .firstPage-title-btn button {
+    background: linear-gradient(
+      180deg,
+      #e4bc6d 0%,
+      rgba(228, 188, 109, 0.22) 250%
+    );
+    border: none;
+    border-radius: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 3vw;
+    text-align: center;
+    color: #0c0b0a;
+    cursor: pointer;
+  }
+  .header__inner {
+    /* margin-top: 10rem; */
+  }
+}
+
+@include laptop {
+  .firstPage-title-btn {
+    margin-top: 1.5rem;
+  }
+  .firstPage-button {
+    width: 100%;
+    max-width: 100%;
+    padding: 16px;
+    min-height: auto;
+  }
+  .firstPage-section {
+    margin-top: 0;
+  }
+}

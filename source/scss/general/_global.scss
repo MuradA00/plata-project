@@ -227,10 +227,6 @@ input[type="number"] {
   position: relative;
 }
 
-.overlay {
-  @include overlay;
-}
-
 // * {
 //   &::-webkit-scrollbar {
 //     width: 7px;
@@ -418,10 +414,10 @@ fieldset {
       --image-w: 160px;
       &--left-1 {
         --image-w: 120px;
-        height: fit-content;
+        height: 96px;
         top: -120px;
         img {
-          height: fit-content;
+          height: 96px;
         }
       }
       &--left-2 {
@@ -453,4 +449,10 @@ fieldset {
       }
     }
   }
+}
+
+.hide-button {
+  opacity: 0;
+  transform: translateY(.5rem);
+  pointer-events: none;
 }

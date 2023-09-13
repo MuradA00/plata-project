@@ -1,4 +1,4 @@
-<section class="exchanger">
+<section class="exchanger cryptocurrency_form" data-currency-type="usdtToUsd">
   <div class="exchanger__container container">
     <div class="exchanger-body">
       <div class="exchanger-header">
@@ -11,8 +11,8 @@
               Envíe
             </div>
             <div class="exchanger-cols__field">
-              <input type="number" class="exchanger-cols__input" value="7900">
-              <div class="exchanger-cols__currency">
+              <input type="number" class="exchanger-cols__input" id="cryptocurrency-form-first-input" value="7900">
+              <div class="exchanger-cols__currency currency_form__usdt-input-icon-box">
                 <div class="exchanger-cols__currency-value">
                   <img src="../../img/sprite/usdt-icon.svg" alt="currency-icon">
                 </div>
@@ -28,12 +28,12 @@
               Reciba
             </div>
             <div class="exchanger-cols__field">
-              <input type="number" class="exchanger-cols__input" value="7750.50">
-              <div class="exchanger-cols__currency">
+              <input type="number" class="exchanger-cols__input" value="7750.50" id="cryptocurrency-form-second-input">
+              <div class="exchanger-cols__currency currency_form__usd-input-icon-box crypto">
                 <div class="exchanger-cols__currency-value">
-                  <img src="../../img/sprite/usdt-icon.svg" alt="currency-icon">
+                  <img src="../../img/sprite/dollar-icon.svg" alt="currency-icon">
                 </div>
-                <div class="exchanger-cols__currency-name">USDT</div>
+                <div class="exchanger-cols__currency-name">USD</div>
               </div>
             </div>
           </div>
@@ -61,7 +61,7 @@
             </div>
           </div>
         </div>
-        <button class="exchanger-button button">
+        <button class="exchanger-button button" id="cryptocurrency-sbmt">
           <span class="button-text">
             Dejar una solicitud
           </span>

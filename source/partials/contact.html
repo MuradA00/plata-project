@@ -1,9 +1,9 @@
-<section class="contact">
+<section class="contact contacts_container">
   <div class="contact-absolute">
     <img src="../img/contact/contact-bag-image.webp" alt="contact-image">
   </div>
   <div class="contact__container container">
-    <div class="contact-body">
+    <div class="contact-body contacts_container_content-box">
       <div class="contact-col contact-col--flex">
         <h6 class="contact-title global-heading global-heading--gradient">
           Contáctenos y nos pondremos en contacto con usted
@@ -16,7 +16,7 @@
             <span class="button-text">Contáctenos en Telegram</span>
           </a>
           <span class="contact-divider"></span>
-          <form class="contacts_container_form">
+          <form class="contacts_container_form form">
             <input type="text" class="contacts_container_input name-input fieldsets__input" placeholder="¿Cómo podemos contactarle?">
             <div class="contacts-input-container" id="contact-city-select-box">
               <div class="select modal-form-city-input">
@@ -25,13 +25,13 @@
                 </div>
                 <div class="selectDropdown">
                   <div class="option contacts-input skip" data-type="LAOption">
-                    Лос-Анджелес
+                    Los Ángeles
                   </div>
                   <div class="option contacts-input skip" data-type="MiamiOption">
-                    Майами
+                    Miami
                   </div>
                   <div class="option contacts-input contact-hidden-city-option skip" id="modalOtherOption1" data-type="otherOption">
-                    Другой
+                    Otro
                   </div>
                 </div>
               </div>
@@ -54,7 +54,7 @@
                     <img src="../img/sms_icon.png" class="option-img" alt="">IMessage
                   </div>
                   <div class="option contacts-input contact-option-form numberOnly optionn" data-type="fourOption">
-                    <img src="../img/phone_icon.png" class="option-img" alt="">Звонок по телефону
+                    <img src="../img/phone_icon.png" class="option-img" alt="">Llamada telefónica
                   </div>
                   <div class="option contacts-input contact-option-form numberOnly optionn" data-type="fiveOption">
                     <img src="../img/mail_icon.png" class="option-img" alt="">SMS
@@ -64,7 +64,7 @@
             </div>
             <input type="text" class="contact-form-hidden-number-input contacts_container_input name-input hidden phone-mask fieldsets__input" id="contact-way-spec-input" placeholder="Введите ваш телефон">
             <textarea class="contacts_container_input comment-input fieldsets__input" placeholder="Comentarios"></textarea>
-            <button class="contacts_container-btn pulse-animation button">
+            <button class="button contacts_container-btn">
               <span class="button-text">Enviar</span>
             </button>
           </form>
@@ -72,7 +72,7 @@
       </div>
       <div class="contact-col">
         <div class="contact-image">
-          <img src="../img/contact/contact-image.webp" alt="contact-image">
+          <img src="../img/contact/contact-image.webp" id="us_map_img" alt="contact-image">
         </div>
       </div>
     </div>

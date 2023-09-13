@@ -534,6 +534,7 @@ on("click", ".option", (item) => {
   ) {
     hiddenContactFormCityInput.classList.add("hidden");
     if (window.innerWidth > 767) {
+      usMapImg.parentNode.classList.add('scale-image-active')
       usMapImg.classList.remove("mi-scale");
       usMapImg.classList.add("la-scale");
     } else {

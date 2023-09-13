@@ -1,12 +1,16 @@
 import './_vendor';
 import './_components';
-// import './components/contact-form-service.js'
-// import './components/currencies-select'
+import './components/contact-form-service.js'
+import './components/currencies-select'
+// import './components/form-popup'
+import './components/forms'
 
 const menu = document.querySelector('.menu');
 const burger = document.querySelector('.header-burger');
 const closeMenu = document.querySelector('.menu-close');
 const body = document.body;
+const contactTrigger = document.querySelector('.contact');
+const fixedButton = document.querySelector('.header-button')
 
 document.querySelectorAll('.menu-list__link').forEach(link => {
   link.addEventListener('click', () => {
@@ -38,6 +42,100 @@ closeMenu.addEventListener('click', () => {
 })
 burger.addEventListener('click', menuHandler)
 
+// if (AOS) {
+//   AOS.init({
+//     once: true
+//   })
+// }
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  // Get the form by its class
+  const form = document.querySelector(".form");
+
+  form.addEventListener("submit", async function(e) {
+      e.preventDefault();
+
+      const name = form.querySelector("[name='name']").value.trim();
+      const phone = form.querySelector("[name='phoneNumber']").value.trim();
+      const email = form.querySelector("[name='email']").value.trim();
+      const sum = parseFloat(form.querySelector("[name='sum']").value.trim());
+      // Validation
+      if (!name || !phone || !email || isNaN(sum)) {
+          alertForm("Пожалуйста, заполните все поля.");
+          return;
+      }
+      if (!validateEmail(email)) {
+          alertForm("Пожалуйста, введите действительный адрес электронной почты.");
+          return;
+      }
+      if (sum < 50000) {
+          alertForm("Сумма должна быть не менее 50,000$.");
+          return;
+      }
+
+      // Collect data from the form
+      const formData = new FormData(form);
+
+      // Convert FormData to JSON
+      const data = {};
+      formData.forEach((value, key) => {
+          data[key] = value;
+      });
+
+      try {
+          const response = await fetch("https://whatmoneyapi.azurewebsites.net/invest", {
+              method: "POST",
+              headers: {
+                  "Content-Type": "application/json"
+              },
+              body: JSON.stringify(data)
+          });
+
+          if (response.ok) {
+              // If the response was successful, display a popup
+              successForm("Ваша заявка принята!");
+              form.reset();
+          } else {
+              // Handle error
+              alertForm("Произошла ошибка при отправке. Пожалуйста, попробуйте снова.");
+          }
+      } catch (error) {
+          console.error("Error:", error);
+          alertForm("Произошла ошибка при отправке. Пожалуйста, попробуйте снова.");
+      }
+  });
+});
+
+function alertForm(message) {
+  const messageContainer = document.getElementById("formMessage");
+  messageContainer.textContent = message;
+  // Optionally, hide the message after a few seconds
+  setTimeout(() => {
+      messageContainer.textContent = '';
+  }, 5000);  // 5 seconds
+}
+
+function successForm(message) {
+  const messageContainer = document.getElementById("formSuccess");
+  messageContainer.textContent = message;
+  // Optionally, hide the message after a few seconds
+  setTimeout(() => {
+      messageContainer.textContent = '';
+  }, 20000);  // 5 seconds
+}
+
+
+function validateEmail(email) {
+  const regex = /^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$/;
+  return regex.test(email);
+}
+
+window.addEventListener('scroll', () => {
+  console.log(contactTrigger.offsetTop)
+  window.pageYOffset > (contactTrigger.offsetTop - (contactTrigger.clientHeight / 2)) ? fixedButton.classList.add('hide-button') : fixedButton.classList.remove('hide-button');
+})
+
 if (Swiper) {
   const quotersSlider = new Swiper('.quotes__hidden', {
 		effect: 'coverflow',
@@ -50,156 +148,3 @@ if (Swiper) {
     },
   })
 }
-
-// if (AOS) {
-//   AOS.init({
-//     once: true
-//   })
-// }
-
-
-if (Swiper) {
-  const VIDEO_SRC_MAP = {
-    "1-video": "../img/video/vadimlatypof.mp4",
-    "2-video": "../img/video/paul3344.mp4",
-    "3-video": "../img/video/ruslan_nigmatullin.mp4",
-    "4-video": "../img/video/cometvic.mp4",
-    "5-video": "../img/video/mixollya28.mp4",
-    "6-video": "../img/video/wall_str_cat.mp4",
-  };
-
-  const VIDEO_DATA_MAP = {
-    "1-video": {
-      name: "Vadim Latypov",
-      instagramm: "vadimlatypof",
-      link: "https://www.instagram.com/vadimlatypof/",
-    },
-    "2-video": {
-      name: "Paul Erl",
-      instagramm: "paul3344",
-      link: "https://www.instagram.com/paul3344/",
-    },
-    "3-video": {
-      name: "Ruslan Nigmatullin",
-      instagramm: "ruslan_nigmatullin",
-      link: "https://instagram.com/ruslan_nigmatullin",
-    },
-    "4-video": {
-      name: "Viktoriia Hrab",
-      instagramm: "cometvic",
-      link: "https://www.instagram.com/cometvic",
-    },
-    "5-video": {
-      name: "Olya",
-      instagramm: "mixollya28",
-      link: "https://www.instagram.com/mixollya28",
-    },
-    "6-video": {
-      name: "Irina Sivak",
-      instagramm: "wall_street_cat",
-      link: "https://www.instagram.com/wall_street_cat/",
-    },
-  };
-
-  const btnsOpenVideoModal = document.querySelectorAll(
-    ".preview_container-video-btn"
-  );
-  const videoModalBox = document.querySelector(".modal-video-box");
-  const videoOverlay = document.querySelector(".video-overlay");
-  const videoModal = document.querySelector(".modal-video-play");
-  const videoViewName = document.querySelector(".modal-video-name.mvideo");
-  const videoViewInst = document.querySelector(".modal-video-inst.mvideo");
-
-  const instClickHandler = (event) => {
-    window.open(
-      `${VIDEO_DATA_MAP[event.currentTarget.dataset.type].link}`,
-      "_blank",
-      "fullscreen=yes"
-    );
-    videoViewInst.removeEventListener("click", instClickHandler);
-  };
-
-  const openVideoModal = (event) => {
-    const isMobile = window.innerWidth <= 767;
-    event.preventDefault();
-    videoModal.children[0].src = VIDEO_SRC_MAP[event.currentTarget.dataset.type];
-    videoViewName.textContent =
-      VIDEO_DATA_MAP[event.currentTarget.dataset.type].name;
-    videoViewInst.children[2].href =
-      VIDEO_DATA_MAP[event.currentTarget.dataset.type].link;
-    videoViewInst.children[2].textContent =
-      VIDEO_DATA_MAP[event.currentTarget.dataset.type].instagramm;
-    videoModal.load();
-    videoModal.play();
-    isMobile && videoViewInst.addEventListener("click", instClickHandler);
-    videoModalBox.classList.remove("hidden");
-    videoOverlay.classList.remove("hidden");
-    document.body.style.overflow = "hidden";
-  };
-
-  const closeVideoModal = (e) => {
-    if (!e.target.classList.contains("mvideo")) {
-      videoModalBox.classList.add("hidden");
-      videoOverlay.classList.add("hidden");
-      document.body.style.overflow = "";
-      videoModal.pause();
-      videoViewInst.removeEventListener("click", instClickHandler);
-    }
-  };
-
-  for (let i = 0; i < btnsOpenVideoModal.length; i++) {
-    btnsOpenVideoModal[i].addEventListener("click", openVideoModal);
-  }
-
-  videoOverlay.addEventListener("click", closeVideoModal);
-
-  var swiper = new Swiper(".swiper-container", {
-    effect: "coverflow",
-    loop: "true",
-    grabCursor: true,
-    centeredSlides: true,
-    slidesPerView: 2,
-    centeredSlides: true,
-    initialSlide: 2,
-    coverflowEffect: {
-      rotate: 0,
-      stretch: 60,
-      depth: 350,
-      modifier: 1,
-      slideShadows: true,
-    },
-    parallax: true,
-
-    pagination: {
-      el: ".swiper-pagination",
-    },
-  });
-
-  var swiperDesktop = new Swiper(".swiper", {
-    effect: "coverflow",
-    grabCursor: true,
-    initialSlide: 1,
-    slidesPerView: "3",
-    coverflowEffect: {
-      rotate: 0,
-      stretch: 0,
-      depth: 100,
-      modifier: 2,
-      slideShadows: false,
-    },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-    spaceBetween: -320,
-    loop: true,
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-  });
-}
-
-// import './components/forms';
-
-
